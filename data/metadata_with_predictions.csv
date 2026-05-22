@@ -1,0 +1,434 @@
+,GSE,object,diagnosis,sex,age,ethnicity,RNA_type,treatment,disease_type,country,state_province,continent,ifn_status,Batch,IFN_Probability,Predicted_IFN_status
+SRR10342368,GSE139350,PBMC,SLE,F,47.0,,polyA,,SLE,China,Hubei,,,1,0.06,Low
+SRR10342369,GSE139350,PBMC,SLE,F,38.0,,polyA,,SLE,China,Hubei,,,1,0.25,Low
+SRR10342370,GSE139350,PBMC,H,F,45.0,,polyA,,H,China,Hubei,,,0,0.0,Low
+SRR10342371,GSE139350,PBMC,H,F,37.0,,polyA,,H,China,Hubei,,,1,0.0,Low
+SRR12794681,GSE159225,Leukocytes,MS,M,,,total,,RR MS,Spain,,Europe,,2,0.0,Low
+SRR12794682,GSE159225,Leukocytes,MS,M,,,total,,RR MS,Spain,,Europe,,2,0.0,Low
+SRR12794683,GSE159225,Leukocytes,MS,F,,,total,,RR MS,Spain,,Europe,,2,0.0,Low
+SRR12794684,GSE159225,Leukocytes,MS,M,,,total,,RR MS,Spain,,Europe,,2,0.0,Low
+SRR12794685,GSE159225,Leukocytes,MS,M,,,total,,RR MS,Spain,,Europe,,2,0.33,Low
+SRR12794686,GSE159225,Leukocytes,MS,F,,,total,,RR MS,Spain,,Europe,,2,1.0,High
+SRR12794687,GSE159225,Leukocytes,MS,F,,,total,,RR MS,Spain,,Europe,,2,0.01,Low
+SRR12794688,GSE159225,Leukocytes,MS,F,,,total,,RR MS,Spain,,Europe,,2,0.0,Low
+SRR12794689,GSE159225,Leukocytes,MS,F,,,total,,RR MS,Spain,,Europe,,2,0.02,Low
+SRR12794690,GSE159225,Leukocytes,MS,F,,,total,,RR MS,Spain,,Europe,,2,0.52,Low
+SRR12794691,GSE159225,Leukocytes,MS,F,,,total,,RR MS,Spain,,Europe,,2,0.0,Low
+SRR12794692,GSE159225,Leukocytes,MS,F,,,total,,RR MS,Spain,,Europe,,2,0.0,Low
+SRR12794693,GSE159225,Leukocytes,MS,F,,,total,,RR MS,Spain,,Europe,,2,0.97,High
+SRR12794694,GSE159225,Leukocytes,MS,F,,,total,,RR MS,Spain,,Europe,,2,0.0,Low
+SRR12794695,GSE159225,Leukocytes,MS,F,,,total,,RR MS,Spain,,Europe,,2,0.12,Low
+SRR12794696,GSE159225,Leukocytes,MS,F,,,total,,RR MS,Spain,,Europe,,2,0.0,Low
+SRR12794697,GSE159225,Leukocytes,MS,F,,,total,,RR MS,Spain,,Europe,,2,0.49,Low
+SRR12794698,GSE159225,Leukocytes,MS,F,,,total,,RR MS,Spain,,Europe,,2,0.51,Low
+SRR12794699,GSE159225,Leukocytes,MS,F,,,total,,RR MS,Spain,,Europe,,2,1.0,High
+SRR12794700,GSE159225,Leukocytes,MS,F,,,total,,RR MS,Spain,,Europe,,2,0.01,Low
+SRR12794701,GSE159225,Leukocytes,MS,F,,,total,,SP MS,Spain,,Europe,,2,0.21,Low
+SRR12794702,GSE159225,Leukocytes,MS,M,,,total,,SP MS,Spain,,Europe,,2,0.27,Low
+SRR12794703,GSE159225,Leukocytes,MS,M,,,total,,SP MS,Spain,,Europe,,2,0.0,Low
+SRR12794704,GSE159225,Leukocytes,MS,F,,,total,,SP MS,Spain,,Europe,,2,0.02,Low
+SRR12794705,GSE159225,Leukocytes,MS,F,,,total,,SP MS,Spain,,Europe,,2,0.0,Low
+SRR12794706,GSE159225,Leukocytes,MS,F,,,total,,SP MS,Spain,,Europe,,2,0.0,Low
+SRR12794707,GSE159225,Leukocytes,MS,F,,,total,,SP MS,Spain,,Europe,,2,0.0,Low
+SRR12794708,GSE159225,Leukocytes,MS,F,,,total,,SP MS,Spain,,Europe,,2,0.49,Low
+SRR12794709,GSE159225,Leukocytes,MS,F,,,total,,SP MS,Spain,,Europe,,2,0.28,Low
+SRR12794710,GSE159225,Leukocytes,MS,M,,,total,,SP MS,Spain,,Europe,,2,0.0,Low
+SRR12794711,GSE159225,Leukocytes,H,M,,,total,,H,Spain,,Europe,,2,0.0,Low
+SRR12794712,GSE159225,Leukocytes,H,M,,,total,,H,Spain,,Europe,,2,0.0,Low
+SRR12794713,GSE159225,Leukocytes,H,M,,,total,,H,Spain,,Europe,,2,0.0,Low
+SRR12794714,GSE159225,Leukocytes,H,M,,,total,,H,Spain,,Europe,,2,0.0,Low
+SRR12794715,GSE159225,Leukocytes,H,M,,,total,,H,Spain,,Europe,,2,1.0,High
+SRR12794716,GSE159225,Leukocytes,H,M,,,total,,H,Spain,,Europe,,2,0.0,Low
+SRR12794717,GSE159225,Leukocytes,H,F,,,total,,H,Spain,,Europe,,2,0.0,Low
+SRR12794718,GSE159225,Leukocytes,H,F,,,total,,H,Spain,,Europe,,2,0.0,Low
+SRR12794719,GSE159225,Leukocytes,H,F,,,total,,H,Spain,,Europe,,2,0.0,Low
+SRR12794720,GSE159225,Leukocytes,H,F,,,total,,H,Spain,,Europe,,2,0.0,Low
+SRR12794721,GSE159225,Leukocytes,H,F,,,total,,H,Spain,,Europe,,2,0.2,Low
+SRR12794722,GSE159225,Leukocytes,H,F,,,total,,H,Spain,,Europe,,2,0.0,Low
+SRR12794723,GSE159225,Leukocytes,H,F,,,total,,H,Spain,,Europe,,2,0.95,High
+SRR12794724,GSE159225,Leukocytes,H,F,,,total,,H,Spain,,Europe,,2,0.18,Low
+SRR12794725,GSE159225,Leukocytes,H,F,,,total,,H,Spain,,Europe,,2,0.0,Low
+SRR12794726,GSE159225,Leukocytes,H,F,,,total,,H,Spain,,Europe,,2,0.0,Low
+SRR12794727,GSE159225,Leukocytes,H,F,,,total,,H,Spain,,Europe,,2,0.32,Low
+SRR12794728,GSE159225,Leukocytes,H,F,,,total,,H,Spain,,Europe,,2,0.0,Low
+SRR12794729,GSE159225,Leukocytes,H,F,,,total,,H,Spain,,Europe,,2,0.0,Low
+SRR12794730,GSE159225,Leukocytes,H,F,,,total,,H,Spain,,Europe,,2,0.23,Low
+SRR13214141,GSE162828,PBMC,SLE,,,,total,,SLE,China,Zhejiang,,,0,0.51,Low
+SRR13214142,GSE162828,PBMC,SLE,,,,total,,SLE,China,Zhejiang,,,0,0.45,Low
+SRR13214143,GSE162828,PBMC,SLE,,,,total,,SLE,China,Zhejiang,,,2,0.19,Low
+SRR13214144,GSE162828,PBMC,SLE,,,,total,,SLE,China,Zhejiang,,,0,0.74,High
+SRR13214145,GSE162828,PBMC,SLE,,,,total,,SLE,China,Zhejiang,,,1,0.0,Low
+SRR13214146,GSE162828,PBMC,H,,,,total,,H,China,Zhejiang,,,2,0.0,Low
+SRR13214147,GSE162828,PBMC,H,,,,total,,H,China,Zhejiang,,,2,0.25,Low
+SRR13214148,GSE162828,PBMC,H,,,,total,,H,China,Zhejiang,,,2,0.01,Low
+SRR13214149,GSE162828,PBMC,H,,,,total,,H,China,Zhejiang,,,2,0.19,Low
+SRR13214150,GSE162828,PBMC,H,,,,total,,H,China,Zhejiang,,,2,0.01,Low
+SRR13489201,GSE165159,PBMC,SLE,F,26.0,,total,,SLE,China,Hubei Province,,,0,0.0,Low
+SRR13489202,GSE165159,PBMC,SLE,F,39.0,,total,,SLE,China,Hubei Province,,,0,0.3,Low
+SRR13489203,GSE165159,PBMC,SLE,F,47.0,,total,,SLE,China,Hubei Province,,,1,0.03,Low
+SRR13489204,GSE165159,PBMC,SLE,F,24.0,,total,,SLE,China,Hubei Province,,,0,0.0,Low
+SRR13489205,GSE165159,PBMC,SLE,F,38.0,,total,,SLE,China,Hubei Province,,,0,0.0,Low
+SRR13489206,GSE165159,PBMC,SLE,F,42.0,,total,,SLE,China,Hubei Province,,,0,0.0,Low
+SRR13810601,GSE167923,whole_blood,CLE,F,,C,total,,SCLE,USA,Texas,North America,,2,0.97,High
+SRR13810602,GSE167923,whole_blood,CLE,F,,AA,total,,SCLE,USA,Texas,North America,,2,0.78,High
+SRR13810603,GSE167923,whole_blood,CLE,F,,C,total,,SCLE,USA,Texas,North America,,2,0.08,Low
+SRR13810604,GSE167923,whole_blood,CLE,F,,C,total,,SCLE,USA,Texas,North America,,2,0.0,Low
+SRR13810605,GSE167923,whole_blood,CLE,F,,C,total,,SCLE,USA,Texas,North America,,2,0.91,High
+SRR13810606,GSE167923,whole_blood,CLE,F,,H,total,,DLE,USA,Texas,North America,,2,0.93,High
+SRR13810607,GSE167923,whole_blood,CLE,F,,C,total,,TLE,USA,Texas,North America,,2,0.0,Low
+SRR13810608,GSE167923,whole_blood,CLE,F,,C,total,,TLE,USA,Texas,North America,,2,0.22,Low
+SRR13810609,GSE167923,whole_blood,CLE,F,,C,total,,TLE,USA,Texas,North America,,2,0.85,High
+SRR13810610,GSE167923,whole_blood,CLE,F,,AA,total,,LP,USA,Texas,North America,,2,0.89,High
+SRR13810611,GSE167923,whole_blood,CLE,F,,AA,total,,DLE,USA,Texas,North America,,2,1.0,High
+SRR13810612,GSE167923,whole_blood,CLE,F,,C,total,,DLE,USA,Texas,North America,,2,0.0,Low
+SRR13810613,GSE167923,whole_blood,CLE,F,,C,total,,DLE,USA,Texas,North America,,2,0.76,High
+SRR13810614,GSE167923,whole_blood,CLE,F,,AA,total,,DLE,USA,Texas,North America,,2,0.77,High
+SRR13810615,GSE167923,whole_blood,CLE,M,,AA,total,,DLE,USA,Texas,North America,,2,1.0,High
+SRR13810616,GSE167923,whole_blood,CLE,M,,AA,total,,DLE,USA,Texas,North America,,2,0.41,Low
+SRR13810617,GSE167923,whole_blood,CLE,M,,AA,total,,DLE,USA,Texas,North America,,2,0.79,High
+SRR13810618,GSE167923,whole_blood,CLE,M,,AA,total,,DLE,USA,Texas,North America,,2,0.12,Low
+SRR13810619,GSE167923,whole_blood,CLE,F,,AA,total,,DLE,USA,Texas,North America,,2,0.81,High
+SRR13810620,GSE167923,whole_blood,CLE,F,,AA,total,,DLE,USA,Texas,North America,,2,0.14,Low
+SRR13810621,GSE167923,whole_blood,CLE,F,,C,total,,SCLE,USA,Texas,North America,,2,0.92,High
+SRR13810622,GSE167923,whole_blood,CLE,F,,C,total,,DLE,USA,Texas,North America,,2,0.84,High
+SRR13810623,GSE167923,whole_blood,CLE,F,,H,total,,DLE,USA,Texas,North America,,2,0.92,High
+SRR13810624,GSE167923,whole_blood,CLE,F,,H,total,,SCLE,USA,Texas,North America,,2,0.0,Low
+SRR13810625,GSE167923,whole_blood,CLE,F,,AA,total,,DLE,USA,Texas,North America,,2,0.87,High
+SRR13810626,GSE167923,whole_blood,CLE,F,,AA,total,,DLE,USA,Texas,North America,,2,0.98,High
+SRR13810627,GSE167923,whole_blood,CLE,F,,AA,total,,DLE,USA,Texas,North America,,2,0.98,High
+SRR13810628,GSE167923,whole_blood,CLE,M,,H,total,,DLE,USA,Texas,North America,,2,1.0,High
+SRR13810629,GSE167923,whole_blood,CLE,F,,AA,total,,DLE,USA,Texas,North America,,2,0.81,High
+SRR13810630,GSE167923,whole_blood,CLE,M,,AS,total,,DLE,USA,Texas,North America,,2,0.93,High
+SRR13810631,GSE167923,whole_blood,CLE,F,,C,total,,DLE,USA,Texas,North America,,2,0.46,Low
+SRR13810632,GSE167923,whole_blood,CLE,M,,AA,total,,DLE,USA,Texas,North America,,2,0.8,High
+SRR13810633,GSE167923,whole_blood,CLE,F,,AA,total,,DLE,USA,Texas,North America,,2,0.81,High
+SRR13810634,GSE167923,whole_blood,CLE,F,,AA,total,,LP,USA,Texas,North America,,2,0.96,High
+SRR13810635,GSE167923,whole_blood,CLE,F,,AA,total,,TLE,USA,Texas,North America,,2,0.99,High
+SRR13810636,GSE167923,whole_blood,CLE,M,,C,total,,TLE,USA,Texas,North America,,2,0.11,Low
+SRR13810637,GSE167923,whole_blood,CLE,F,,AA,total,,TLE,USA,Texas,North America,,2,1.0,High
+SRR13810638,GSE167923,whole_blood,CLE,F,,AA,total,,DLE,USA,Texas,North America,,2,0.89,High
+SRR13810639,GSE167923,whole_blood,CLE,M,,C,total,,TLE,USA,Texas,North America,,2,0.92,High
+SRR13810640,GSE167923,whole_blood,CLE,M,,O,total,,TLE,USA,Texas,North America,,2,0.15,Low
+SRR13810641,GSE167923,whole_blood,CLE,M,,C,total,,TLE,USA,Texas,North America,,2,0.92,High
+SRR13810642,GSE167923,whole_blood,CLE,F,,C,total,,TLE,USA,Texas,North America,,2,0.0,Low
+SRR13810643,GSE167923,whole_blood,CLE,F,,AA,total,,DLE,USA,Texas,North America,,2,0.88,High
+SRR13810644,GSE167923,whole_blood,CLE,M,,AA,total,,DLE,USA,Texas,North America,,2,0.91,High
+SRR13810645,GSE167923,whole_blood,CLE,F,,AA,total,,DLE,USA,Texas,North America,,2,1.0,High
+SRR13810646,GSE167923,whole_blood,CLE,M,,AA,total,,DLE,USA,Texas,North America,,2,1.0,High
+SRR13810647,GSE167923,whole_blood,CLE,M,,AA,total,,DLE,USA,Texas,North America,,2,0.92,High
+SRR13810648,GSE167923,whole_blood,CLE,F,,O,total,,DLE,USA,Texas,North America,,2,0.0,Low
+SRR13810649,GSE167923,whole_blood,CLE,F,,AA,total,,DLE,USA,Texas,North America,,2,1.0,High
+SRR13810650,GSE167923,whole_blood,CLE,F,,AA,total,,DLE,USA,Texas,North America,,2,0.98,High
+SRR13810651,GSE167923,whole_blood,CLE,M,,AA,total,,DLE,USA,Texas,North America,,2,0.23,Low
+SRR13810652,GSE167923,whole_blood,CLE,F,,C,total,,DLE,USA,Texas,North America,,2,0.91,High
+SRR13810653,GSE167923,whole_blood,CLE,F,,AA,total,,DLE,USA,Texas,North America,,2,0.8,High
+SRR13810654,GSE167923,whole_blood,CLE,M,,AA,total,,DLE,USA,Texas,North America,,2,0.75,High
+SRR13810655,GSE167923,whole_blood,CLE,F,,AA,total,,DLE,USA,Texas,North America,,2,0.0,Low
+SRR13810656,GSE167923,whole_blood,CLE,F,,AA,total,,DLE,USA,Texas,North America,,2,0.8,High
+SRR13810657,GSE167923,whole_blood,CLE,F,,C,total,,DLE,USA,Texas,North America,,2,0.0,Low
+SRR13810658,GSE167923,whole_blood,CLE,F,,AA,total,,DLE,USA,Texas,North America,,2,0.91,High
+SRR13810659,GSE167923,whole_blood,CLE,F,,O,total,,DLE,USA,Texas,North America,,2,0.0,Low
+SRR13810660,GSE167923,whole_blood,CLE,F,,AA,total,,DLE,USA,Texas,North America,,2,1.0,High
+SRR13810661,GSE167923,whole_blood,CLE,F,,C,total,,DLE,USA,Texas,North America,,2,0.0,Low
+SRR13810662,GSE167923,whole_blood,CLE,M,,C,total,,DLE,USA,Texas,North America,,2,0.48,Low
+SRR13988787,GSE169080,PBMC,H,,,,total,,H,China,Shapingba,,,2,0.06,Low
+SRR13988789,GSE169080,PBMC,SLE,,,,total,,SLE,China,Shapingba,,,0,0.9,High
+SRR13988791,GSE169080,PBMC,SLE,,,,total,,SLE,China,Shapingba,,,2,0.88,High
+SRR13988792,GSE169080,PBMC,SLE,,,,total,,SLE,China,Shapingba,,,0,0.46,Low
+SRR13988793,GSE169080,PBMC,SLE,,,,total,,SLE,China,Shapingba,,,0,0.45,Low
+SRR13988794,GSE169080,PBMC,SLE,,,,total,,SLE,China,Shapingba,,,2,0.68,High
+SRR13988795,GSE169080,PBMC,H,,,,total,,H,China,Shapingba,,,2,0.0,Low
+SRR13988796,GSE169080,PBMC,H,,,,total,,H,China,Shapingba,,,2,0.0,Low
+SRR13988797,GSE169080,PBMC,H,,,,total,,H,China,Shapingba,,,2,0.0,Low
+SRR13988798,GSE169080,PBMC,H,,,,total,,H,China,Shapingba,,,2,0.0,Low
+SRR13988799,GSE169080,PBMC,H,,,,total,,H,China,Shapingba,,,2,0.06,Low
+SRR14694911,GSE175839,PBMC,SLE,,,Tibetan,mRNA,,SLE,China,,,,0,0.0,Low
+SRR14694912,GSE175839,PBMC,SLE,,,Tibetan,mRNA,,SLE,China,,,,0,0.0,Low
+SRR14694913,GSE175839,PBMC,SLE,,,Tibetan,mRNA,,SLE,China,,,,0,0.02,Low
+SRR14694914,GSE175839,PBMC,SLE,,,Tibetan,mRNA,,SLE,China,,,,0,0.0,Low
+SRR14694915,GSE175839,PBMC,SLE,,,Tibetan,mRNA,,SLE,China,,,,0,0.06,Low
+SRR14694916,GSE175839,PBMC,H,,,Tibetan,mRNA,,H,China,,,,0,0.0,Low
+SRR14694917,GSE175839,PBMC,H,,,Tibetan,mRNA,,H,China,,,,0,0.0,Low
+SRR14694918,GSE175839,PBMC,H,,,Tibetan,mRNA,,H,China,,,,0,0.47,Low
+SRR14694919,GSE175839,PBMC,H,,,Tibetan,mRNA,,H,China,,,,0,0.01,Low
+SRR14694920,GSE175839,PBMC,H,,,Tibetan,mRNA,,H,China,,,,0,0.0,Low
+SRR24971668,GSE235357,PBMC,MS,,,,polyA,,RR MS,Spain,Madrid,Europe,,0,0.99,High
+SRR24971672,GSE235357,PBMC,MS,,,,polyA,,RR MS,Spain,Madrid,Europe,,0,0.0,Low
+SRR24971676,GSE235357,PBMC,MS,,,,polyA,,RR MS,Spain,Madrid,Europe,,0,0.0,Low
+SRR24971680,GSE235357,PBMC,MS,,,,polyA,,RR MS,Spain,Madrid,Europe,,0,0.01,Low
+SRR24971684,GSE235357,PBMC,MS,,,,polyA,,RR MS,Spain,Madrid,Europe,,0,0.0,Low
+SRR24971688,GSE235357,PBMC,MS,,,,polyA,,RR MS,Spain,Madrid,Europe,,0,0.0,Low
+SRR24971692,GSE235357,PBMC,MS,,,,polyA,,RR MS,Spain,Madrid,Europe,,0,0.24,Low
+SRR24971696,GSE235357,PBMC,MS,,,,polyA,,RR MS,Spain,Madrid,Europe,,0,0.0,Low
+SRR24971700,GSE235357,PBMC,MS,,,,polyA,,RR MS,Spain,Madrid,Europe,,0,0.0,Low
+SRR24971704,GSE235357,PBMC,MS,,,,polyA,,RR MS,Spain,Madrid,Europe,,0,0.88,High
+SRR24971706,GSE235357,PBMC,H,,,,polyA,,H,Spain,Madrid,Europe,,0,0.39,Low
+SRR24971708,GSE235357,PBMC,H,,,,polyA,,H,Spain,Madrid,Europe,,0,0.43,Low
+SRR24971710,GSE235357,PBMC,H,,,,polyA,,H,Spain,Madrid,Europe,,0,0.01,Low
+SRR24971712,GSE235357,PBMC,H,,,,polyA,,H,Spain,Madrid,Europe,,0,0.41,Low
+SRR24971714,GSE235357,PBMC,H,,,,polyA,,H,Spain,Madrid,Europe,,0,0.97,High
+SRR24971716,GSE235357,PBMC,H,,,,polyA,,H,Spain,Madrid,Europe,,0,0.97,High
+SRR24971718,GSE235357,PBMC,H,,,,polyA,,H,Spain,Madrid,Europe,,0,0.73,High
+SRR24971720,GSE235357,PBMC,H,,,,polyA,,H,Spain,Madrid,Europe,,0,0.01,Low
+SRR24971722,GSE235357,PBMC,H,,,,polyA,,H,Spain,Madrid,Europe,,0,0.06,Low
+SRR24971724,GSE235357,PBMC,H,,,,polyA,,H,Spain,Madrid,Europe,,0,0.3,Low
+SRR27190653,GSE250023,whole_blood,SLE,F,48.0,,mRNA,,SLE,USA,California,,,1,0.93,High
+SRR27190659,GSE250023,whole_blood,SLE,F,38.0,,mRNA,,SLE,USA,California,,,1,0.9,High
+SRR27190661,GSE250023,whole_blood,SLE,F,29.0,,mRNA,,SLE,USA,California,,,1,0.78,High
+SRR27190669,GSE250023,whole_blood,SLE,F,22.0,,mRNA,,SLE,USA,California,,,1,0.6,Low
+SRR27190675,GSE250023,whole_blood,SLE,F,32.0,,mRNA,,SLE,USA,California,,,1,1.0,High
+SRR27190677,GSE250023,whole_blood,SLE,F,54.0,,mRNA,,SLE,USA,California,,,1,0.88,High
+SRR27190683,GSE250023,whole_blood,SLE,F,22.0,,mRNA,,SLE,USA,California,,,1,0.93,High
+SRR27190686,GSE250023,whole_blood,SLE,F,25.0,,mRNA,,SLE,USA,California,,,1,1.0,High
+SRR27190690,GSE250023,whole_blood,SLE,F,44.0,,mRNA,,SLE,USA,California,,,1,0.0,Low
+SRR27190695,GSE250023,whole_blood,SLE,F,36.0,,mRNA,,SLE,USA,California,,,1,0.0,Low
+SRR27190701,GSE250023,whole_blood,SLE,F,45.0,,mRNA,,SLE,USA,California,,,1,0.24,Low
+SRR27190703,GSE250023,whole_blood,SLE,F,42.0,,mRNA,,SLE,USA,California,,,1,0.13,Low
+SRR27190709,GSE250023,whole_blood,SLE,F,30.0,,mRNA,,SLE,USA,California,,,1,0.87,High
+SRR27190715,GSE250023,whole_blood,SLE,F,51.0,,mRNA,,SLE,USA,California,,,1,0.3,Low
+SRR27190717,GSE250023,whole_blood,SLE,F,34.0,,mRNA,,SLE,USA,California,,,1,0.0,Low
+SRR27190720,GSE250023,whole_blood,SLE,F,38.0,,mRNA,,SLE,USA,California,,,1,0.99,High
+SRR27190726,GSE250023,whole_blood,SLE,F,51.0,,mRNA,,SLE,USA,California,,,1,0.0,Low
+SRR27255044,GSE250453,PBMC,MS,,,,polyA,Treated,RR MS,Spain,Madrid,Europe,,0,0.9,High
+SRR27255045,GSE250453,PBMC,MS,,,,polyA,Basal,RR MS,Spain,Madrid,Europe,,0,0.46,Low
+SRR27255046,GSE250453,PBMC,MS,,,,polyA,Treated,RR MS,Spain,Madrid,Europe,,0,0.27,Low
+SRR27255047,GSE250453,PBMC,MS,,,,polyA,Treated,RR MS,Spain,Madrid,Europe,,0,0.0,Low
+SRR27255048,GSE250453,PBMC,MS,,,,polyA,Treated,RR MS,Spain,Madrid,Europe,,0,0.0,Low
+SRR27255049,GSE250453,PBMC,MS,,,,polyA,Treated,RR MS,Spain,Madrid,Europe,,0,0.45,Low
+SRR27255050,GSE250453,PBMC,MS,,,,polyA,Treated,RR MS,Spain,Madrid,Europe,,0,0.68,High
+SRR27255051,GSE250453,PBMC,MS,,,,polyA,Basal,RR MS,Spain,Madrid,Europe,,0,0.01,Low
+SRR27255052,GSE250453,PBMC,MS,,,,polyA,Basal,RR MS,Spain,Madrid,Europe,,0,0.01,Low
+SRR27255053,GSE250453,PBMC,MS,,,,polyA,Basal,RR MS,Spain,Madrid,Europe,,0,0.0,Low
+SRR27255054,GSE250453,PBMC,MS,,,,polyA,Basal,RR MS,Spain,Madrid,Europe,,0,0.0,Low
+SRR27255055,GSE250453,PBMC,MS,,,,polyA,Basal,RR MS,Spain,Madrid,Europe,,0,0.01,Low
+SRR27255056,GSE250453,PBMC,MS,,,,polyA,Basal,RR MS,Spain,Madrid,Europe,,0,0.01,Low
+SRR27255057,GSE250453,PBMC,MS,,,,polyA,Treated,RR MS,Spain,Madrid,Europe,,0,0.01,Low
+SRR27255058,GSE250453,PBMC,MS,,,,polyA,Treated,RR MS,Spain,Madrid,Europe,,0,0.91,High
+SRR27255059,GSE250453,PBMC,MS,,,,polyA,Treated,RR MS,Spain,Madrid,Europe,,0,0.23,Low
+SRR27255060,GSE250453,PBMC,MS,,,,polyA,Basal,RR MS,Spain,Madrid,Europe,,0,0.01,Low
+SRR27255061,GSE250453,PBMC,MS,,,,polyA,Basal,RR MS,Spain,Madrid,Europe,,0,0.9,High
+SRR27255062,GSE250453,PBMC,MS,,,,polyA,Treated,RR MS,Spain,Madrid,Europe,,0,0.97,High
+SRR27255063,GSE250453,PBMC,MS,,,,polyA,Basal,RR MS,Spain,Madrid,Europe,,0,0.23,Low
+SRR3362713,GSE80183,PBMC,SLE,F,28.0,IN,polyA,,"SLE, CLE",India,Uttar Pradesh,Asia,,1,1.0,High
+SRR3362715,GSE80183,PBMC,SLE,F,32.0,IN,polyA,,"SLE, CLE",India,Uttar Pradesh,Asia,,0,0.33,Low
+SRR3362717,GSE80183,PBMC,SLE,F,45.0,IN,polyA,,"SLE, CLE",India,Uttar Pradesh,Asia,,1,1.0,High
+SRR3362719,GSE80183,PBMC,SLE,F,16.0,IN,polyA,,"SLE, CLE",India,Uttar Pradesh,Asia,,1,1.0,High
+SRR3362721,GSE80183,PBMC,SLE,F,36.0,IN,polyA,,SLE,India,Uttar Pradesh,Asia,,1,1.0,High
+SRR3362723,GSE80183,PBMC,SLE,F,32.0,IN,polyA,,"SLE, CLE",India,Uttar Pradesh,Asia,,1,0.0,Low
+SRR3362725,GSE80183,PBMC,SLE,F,20.0,IN,polyA,,"SLE, CLE",India,Uttar Pradesh,Asia,,1,1.0,High
+SRR3362727,GSE80183,PBMC,SLE,F,27.0,IN,polyA,,"SLE, CLE",India,Uttar Pradesh,Asia,,1,1.0,High
+SRR3362729,GSE80183,PBMC,SLE,F,24.0,IN,polyA,,"SLE, CLE",India,Uttar Pradesh,Asia,,1,1.0,High
+SRR3362731,GSE80183,PBMC,SLE,F,32.0,IN,polyA,,"SLE, CLE",India,Uttar Pradesh,Asia,,1,1.0,High
+SRR3362733,GSE80183,PBMC,SLE,F,36.0,IN,polyA,,SLE,India,Uttar Pradesh,Asia,,1,0.19,Low
+SRR3362734,GSE80183,PBMC,SLE,F,26.0,IN,polyA,,SLE,India,Uttar Pradesh,Asia,,1,0.56,Low
+SRR3362735,GSE80183,PBMC,H,F,,IN,polyA,,H,India,Uttar Pradesh,Asia,,1,0.24,Low
+SRR3362736,GSE80183,PBMC,H,F,,IN,polyA,,H,India,Uttar Pradesh,Asia,,1,0.22,Low
+SRR3362737,GSE80183,PBMC,H,F,,IN,polyA,,H,India,Uttar Pradesh,Asia,,0,0.83,High
+SRR3362738,GSE80183,PBMC,H,F,,IN,polyA,,H,India,Uttar Pradesh,Asia,,1,1.0,High
+SRR4241346,GSE86884,PBMC,SLE,F,38.04,C,polyA,,,USA,Minneapolis,North America,,2,0.83,High
+SRR5115120,GSE92472,PBMC,MS,,,,polyA,,CIS-MS,USA,Tennessee,North America,,1,0.99,High
+SRR5115121,GSE92472,PBMC,MS,,,,polyA,,MS-NAIVE,USA,Tennessee,North America,,1,0.86,High
+SRR5115122,GSE92472,PBMC,MS,,,,polyA,,MS-EST,USA,Tennessee,North America,,1,0.0,Low
+SRR5115123,GSE92472,PBMC,H,,,,polyA,,,USA,Tennessee,North America,,1,0.23,Low
+SRR5115126,GSE92472,PBMC,SLE,,,,polyA,,,USA,Tennessee,North America,,1,0.92,High
+SRR7367602,GSE116006,whole_blood,SLE,F,49.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,,1,0.0,Low
+SRR7367603,GSE116006,whole_blood,SLE,F,41.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367604,GSE116006,whole_blood,SLE,F,45.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,,1,0.94,High
+SRR7367605,GSE116006,whole_blood,SLE,F,49.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367606,GSE116006,whole_blood,SLE,M,50.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,,1,0.77,High
+SRR7367607,GSE116006,whole_blood,SLE,F,34.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,,1,0.01,Low
+SRR7367609,GSE116006,whole_blood,SLE,F,41.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.01,Low
+SRR7367610,GSE116006,whole_blood,SLE,F,38.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367611,GSE116006,whole_blood,SLE,F,65.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367612,GSE116006,whole_blood,SLE,F,33.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,0.55,Low
+SRR7367613,GSE116006,whole_blood,SLE,F,23.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,,1,1.0,High
+SRR7367614,GSE116006,whole_blood,SLE,F,40.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367615,GSE116006,whole_blood,SLE,F,48.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,0,1.0,High
+SRR7367616,GSE116006,whole_blood,SLE,F,47.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,,1,0.05,Low
+SRR7367617,GSE116006,whole_blood,SLE,M,48.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367618,GSE116006,whole_blood,SLE,F,26.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,,1,0.0,Low
+SRR7367619,GSE116006,whole_blood,SLE,F,39.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367620,GSE116006,whole_blood,SLE,F,31.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367621,GSE116006,whole_blood,SLE,M,34.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367622,GSE116006,whole_blood,SLE,F,41.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367624,GSE116006,whole_blood,SLE,F,25.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367625,GSE116006,whole_blood,SLE,F,28.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367626,GSE116006,whole_blood,SLE,F,44.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367627,GSE116006,whole_blood,SLE,F,44.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367628,GSE116006,whole_blood,SLE,F,21.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367629,GSE116006,whole_blood,SLE,F,44.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367630,GSE116006,whole_blood,SLE,F,43.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367631,GSE116006,whole_blood,SLE,F,36.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367632,GSE116006,whole_blood,SLE,M,30.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367633,GSE116006,whole_blood,SLE,F,38.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367634,GSE116006,whole_blood,SLE,F,45.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367635,GSE116006,whole_blood,SLE,M,44.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367636,GSE116006,whole_blood,SLE,F,60.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367637,GSE116006,whole_blood,SLE,F,22.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,0.89,High
+SRR7367638,GSE116006,whole_blood,SLE,F,39.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,Low,0,0.01,Low
+SRR7367639,GSE116006,whole_blood,SLE,F,37.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367640,GSE116006,whole_blood,SLE,F,63.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367641,GSE116006,whole_blood,SLE,F,59.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367642,GSE116006,whole_blood,SLE,F,33.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367643,GSE116006,whole_blood,SLE,M,36.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,,1,1.0,High
+SRR7367644,GSE116006,whole_blood,SLE,F,59.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367645,GSE116006,whole_blood,SLE,F,42.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367646,GSE116006,whole_blood,SLE,F,35.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367647,GSE116006,whole_blood,SLE,F,53.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,0.97,High
+SRR7367648,GSE116006,whole_blood,SLE,F,44.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367649,GSE116006,whole_blood,SLE,F,62.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367650,GSE116006,whole_blood,SLE,M,41.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,,1,1.0,High
+SRR7367651,GSE116006,whole_blood,SLE,F,47.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,,1,1.0,High
+SRR7367652,GSE116006,whole_blood,SLE,F,39.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,0.99,High
+SRR7367653,GSE116006,whole_blood,SLE,F,42.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.6,Low
+SRR7367654,GSE116006,whole_blood,SLE,F,32.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367655,GSE116006,whole_blood,SLE,F,54.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367656,GSE116006,whole_blood,SLE,F,35.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367657,GSE116006,whole_blood,SLE,F,64.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367658,GSE116006,whole_blood,SLE,F,43.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,0,0.81,High
+SRR7367659,GSE116006,whole_blood,SLE,F,31.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367660,GSE116006,whole_blood,SLE,F,59.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,,1,0.22,Low
+SRR7367661,GSE116006,whole_blood,SLE,F,32.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367662,GSE116006,whole_blood,SLE,F,61.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367663,GSE116006,whole_blood,SLE,F,45.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367664,GSE116006,whole_blood,SLE,F,24.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367665,GSE116006,whole_blood,SLE,F,47.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367666,GSE116006,whole_blood,SLE,F,41.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367667,GSE116006,whole_blood,SLE,F,39.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367668,GSE116006,whole_blood,SLE,M,36.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367669,GSE116006,whole_blood,SLE,F,56.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367670,GSE116006,whole_blood,SLE,F,27.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367671,GSE116006,whole_blood,SLE,F,35.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367672,GSE116006,whole_blood,SLE,F,45.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367673,GSE116006,whole_blood,SLE,F,33.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367674,GSE116006,whole_blood,SLE,F,38.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.11,Low
+SRR7367675,GSE116006,whole_blood,SLE,F,47.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367676,GSE116006,whole_blood,SLE,F,25.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367677,GSE116006,whole_blood,SLE,F,41.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,0.92,High
+SRR7367678,GSE116006,whole_blood,SLE,F,46.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367679,GSE116006,whole_blood,SLE,F,34.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367680,GSE116006,whole_blood,SLE,F,35.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367681,GSE116006,whole_blood,SLE,F,41.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367682,GSE116006,whole_blood,SLE,F,27.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367683,GSE116006,whole_blood,SLE,F,46.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,0.67,High
+SRR7367684,GSE116006,whole_blood,SLE,M,59.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367685,GSE116006,whole_blood,SLE,F,42.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367686,GSE116006,whole_blood,SLE,F,30.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367687,GSE116006,whole_blood,SLE,F,36.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367688,GSE116006,whole_blood,SLE,F,25.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367689,GSE116006,whole_blood,SLE,F,69.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367690,GSE116006,whole_blood,SLE,F,38.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367691,GSE116006,whole_blood,SLE,F,46.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.29,Low
+SRR7367692,GSE116006,whole_blood,SLE,F,25.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367693,GSE116006,whole_blood,SLE,F,34.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367694,GSE116006,whole_blood,SLE,F,38.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367695,GSE116006,whole_blood,SLE,F,24.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,,1,1.0,High
+SRR7367697,GSE116006,whole_blood,SLE,F,20.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,0.92,High
+SRR7367698,GSE116006,whole_blood,SLE,F,46.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.01,Low
+SRR7367699,GSE116006,whole_blood,SLE,F,42.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367700,GSE116006,whole_blood,SLE,F,45.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367701,GSE116006,whole_blood,SLE,F,60.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367702,GSE116006,whole_blood,SLE,F,41.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,,1,0.0,Low
+SRR7367703,GSE116006,whole_blood,SLE,F,36.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367704,GSE116006,whole_blood,SLE,F,39.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.01,Low
+SRR7367705,GSE116006,whole_blood,SLE,F,41.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367706,GSE116006,whole_blood,SLE,F,30.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,,1,0.91,High
+SRR7367707,GSE116006,whole_blood,SLE,F,39.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367708,GSE116006,whole_blood,SLE,F,26.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,,1,0.99,High
+SRR7367709,GSE116006,whole_blood,SLE,F,28.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367710,GSE116006,whole_blood,SLE,F,24.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,,1,0.93,High
+SRR7367711,GSE116006,whole_blood,SLE,F,45.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367712,GSE116006,whole_blood,SLE,F,41.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367713,GSE116006,whole_blood,SLE,F,26.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367714,GSE116006,whole_blood,SLE,F,37.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367715,GSE116006,whole_blood,SLE,F,31.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367716,GSE116006,whole_blood,SLE,F,52.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367717,GSE116006,whole_blood,SLE,F,36.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,0.8,High
+SRR7367718,GSE116006,whole_blood,SLE,F,43.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.31,Low
+SRR7367720,GSE116006,whole_blood,SLE,F,35.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367730,GSE116006,whole_blood,SLE,F,39.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,0.97,High
+SRR7367735,GSE116006,whole_blood,SLE,F,29.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367739,GSE116006,whole_blood,SLE,M,54.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.01,Low
+SRR7367740,GSE116006,whole_blood,SLE,F,26.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367742,GSE116006,whole_blood,SLE,F,30.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367746,GSE116006,whole_blood,SLE,F,41.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367748,GSE116006,whole_blood,SLE,F,19.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367749,GSE116006,whole_blood,SLE,F,58.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367755,GSE116006,whole_blood,SLE,F,64.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367756,GSE116006,whole_blood,SLE,F,38.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,0,1.0,High
+SRR7367769,GSE116006,whole_blood,SLE,F,39.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367771,GSE116006,whole_blood,SLE,F,26.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367779,GSE116006,whole_blood,SLE,F,54.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367786,GSE116006,whole_blood,SLE,F,56.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367787,GSE116006,whole_blood,SLE,F,51.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367791,GSE116006,whole_blood,SLE,F,58.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367796,GSE116006,whole_blood,SLE,M,21.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367814,GSE116006,whole_blood,SLE,F,38.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,0.98,High
+SRR7367819,GSE116006,whole_blood,SLE,F,33.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,,1,1.0,High
+SRR7367829,GSE116006,whole_blood,SLE,F,52.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367832,GSE116006,whole_blood,SLE,F,40.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367866,GSE116006,whole_blood,SLE,F,36.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367868,GSE116006,whole_blood,SLE,F,27.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,,1,0.0,Low
+SRR7367872,GSE116006,whole_blood,SLE,F,32.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,0.81,High
+SRR7367875,GSE116006,whole_blood,SLE,F,53.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367876,GSE116006,whole_blood,SLE,F,29.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367879,GSE116006,whole_blood,SLE,F,23.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,,1,0.0,Low
+SRR7367881,GSE116006,whole_blood,SLE,M,28.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367882,GSE116006,whole_blood,SLE,F,47.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367883,GSE116006,whole_blood,SLE,F,64.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,0.96,High
+SRR7367885,GSE116006,whole_blood,SLE,M,31.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367887,GSE116006,whole_blood,SLE,F,37.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367891,GSE116006,whole_blood,SLE,F,65.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.01,Low
+SRR7367893,GSE116006,whole_blood,SLE,F,44.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367901,GSE116006,whole_blood,SLE,F,42.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367903,GSE116006,whole_blood,SLE,F,43.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7367904,GSE116006,whole_blood,SLE,F,57.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,0.83,High
+SRR7367912,GSE116006,whole_blood,SLE,F,44.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367918,GSE116006,whole_blood,SLE,F,53.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367923,GSE116006,whole_blood,SLE,M,52.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367927,GSE116006,whole_blood,SLE,F,46.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367936,GSE116006,whole_blood,SLE,F,26.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367948,GSE116006,whole_blood,SLE,F,63.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.01,Low
+SRR7367950,GSE116006,whole_blood,SLE,F,39.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367976,GSE116006,whole_blood,SLE,F,47.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,,1,0.0,Low
+SRR7367982,GSE116006,whole_blood,SLE,F,35.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,0.91,High
+SRR7367995,GSE116006,whole_blood,SLE,F,20.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7367996,GSE116006,whole_blood,SLE,F,25.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7368009,GSE116006,whole_blood,SLE,F,39.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7368010,GSE116006,whole_blood,SLE,F,26.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7368015,GSE116006,whole_blood,SLE,F,57.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7368019,GSE116006,whole_blood,SLE,F,26.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7368023,GSE116006,whole_blood,SLE,M,57.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,Low,1,0.0,Low
+SRR7368027,GSE116006,whole_blood,SLE,F,32.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7368028,GSE116006,whole_blood,SLE,F,47.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,,1,1.0,High
+SRR7368030,GSE116006,whole_blood,SLE,F,34.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7368040,GSE116006,whole_blood,SLE,F,37.0,,polyA,Placebo,SLE,United_Kingdom,Cambridgeshire,Europe,,1,1.0,High
+SRR7368042,GSE116006,whole_blood,SLE,F,36.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR7368043,GSE116006,whole_blood,SLE,F,53.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,,1,0.99,High
+SRR7368044,GSE116006,whole_blood,SLE,F,29.0,,polyA,Anti_IL6_MAB,SLE,United_Kingdom,Cambridgeshire,Europe,High,1,1.0,High
+SRR8181357,GSE122459,PBMC,SLE,F,43.0,C,polyA,,SLE,USA,CT,,,0,0.27,Low
+SRR8181358,GSE122459,PBMC,SLE,F,60.0,C,polyA,,SLE,USA,CT,,,0,0.21,Low
+SRR8181359,GSE122459,PBMC,SLE,F,29.0,H,polyA,,SLE,USA,CT,,,0,0.03,Low
+SRR8181360,GSE122459,PBMC,SLE,F,36.0,AA,polyA,,SLE,USA,CT,,,0,0.0,Low
+SRR8181361,GSE122459,PBMC,SLE,F,52.0,AA,polyA,,SLE,USA,CT,,,0,0.0,Low
+SRR8181362,GSE122459,PBMC,SLE,F,48.0,H,polyA,,SLE,USA,CT,,,0,0.88,High
+SRR8181363,GSE122459,PBMC,SLE,F,41.0,H,polyA,,SLE,USA,CT,,,0,0.14,Low
+SRR8181364,GSE122459,PBMC,SLE,F,47.0,AA,polyA,,SLE,USA,CT,,,0,0.21,Low
+SRR8181365,GSE122459,PBMC,SLE,F,39.0,H,polyA,,SLE,USA,CT,,,0,0.15,Low
+SRR8181366,GSE122459,PBMC,SLE,F,26.0,AA,polyA,,SLE,USA,CT,,,0,0.45,Low
+SRR8181367,GSE122459,PBMC,SLE,F,49.0,AA,polyA,,SLE,USA,CT,,,0,0.87,High
+SRR8181368,GSE122459,PBMC,SLE,F,48.0,H,polyA,,SLE,USA,CT,,,0,0.01,Low
+SRR8181369,GSE122459,PBMC,SLE,F,39.0,AA,polyA,,SLE,USA,CT,,,0,0.48,Low
+SRR8181370,GSE122459,PBMC,SLE,F,29.0,H,polyA,,SLE,USA,CT,,,0,0.58,Low
+SRR8181371,GSE122459,PBMC,SLE,F,28.0,AA,polyA,,SLE,USA,CT,,,0,0.22,Low
+SRR8181372,GSE122459,PBMC,SLE,F,50.0,AA,polyA,,SLE,USA,CT,,,0,0.47,Low
+SRR8181373,GSE122459,PBMC,SLE,F,50.0,AA,polyA,,SLE,USA,CT,,,0,0.89,High
+SRR8181374,GSE122459,PBMC,SLE,F,27.0,H,polyA,,SLE,USA,CT,,,0,0.89,High
+SRR8181375,GSE122459,PBMC,SLE,F,40.0,AA,polyA,,SLE,USA,CT,,,0,0.45,Low
+SRR8181376,GSE122459,PBMC,SLE,F,33.0,H,polyA,,SLE,USA,CT,,,0,0.32,Low
+SRR8181377,GSE122459,PBMC,H,F,29.0,AA,polyA,,H,USA,CT,,,0,0.0,Low
+SRR8181378,GSE122459,PBMC,H,F,31.0,C,polyA,,H,USA,CT,,,0,0.0,Low
+SRR8181379,GSE122459,PBMC,H,F,34.0,H,polyA,,H,USA,CT,,,0,0.01,Low
+SRR8181380,GSE122459,PBMC,H,F,41.0,H,polyA,,H,USA,CT,,,0,0.0,Low
+SRR8181381,GSE122459,PBMC,H,F,22.0,C,polyA,,H,USA,CT,,,0,0.0,Low
+SRR8181382,GSE122459,PBMC,H,F,68.0,C,polyA,,H,USA,CT,,,0,0.0,Low
