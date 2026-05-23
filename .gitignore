@@ -1,0 +1,8 @@
+./__pycache__/*
+./autoimmunve_analysis/__pycache__/*
+./autoimmunve_analysis/__pycache__/
+__pycache__
+mixcr.tar.gz
+mixcr_clonotypes
+mixcr_clonotypes/*
+./mixcr_clonotypes/*
