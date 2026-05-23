@@ -1,0 +1,9 @@
+name: arcashla
+channels:
+  - defaults
+  - bioconda
+  - conda-forge
+dependencies:
+  - arcas-hla
+  - samtools
+
