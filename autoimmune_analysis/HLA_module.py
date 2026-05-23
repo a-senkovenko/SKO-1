@@ -3,8 +3,8 @@ import sys
 import pandas as pd
 from loguru import logger
 
-from stat_tests import get_fisher_test_results, get_chi_test_results
-from pie_charts import make_pie
+from autoimmune_analysis import HLA_stat_tests
+from autoimmune_analysis import HLA_pie_charts
 
 
 logger.remove()
@@ -223,7 +223,7 @@ class HLA:
                 "Run count_alleles() before fisher_test()."
             )
         
-        self.fisher_test_results = get_fisher_test_results(
+        self.fisher_test_results = HLA_stat_tests.get_fisher_test_results(
             self.allele_counts, min_carriers
         )
 
@@ -243,7 +243,7 @@ class HLA:
                 "Run count_alleles() before chi2_test()."
             )
         
-        self.chi2_test_results = get_chi_test_results(self.allele_counts, min_carriers)
+        self.chi2_test_results = HLA_stat_tests.get_chi_test_results(self.allele_counts, min_carriers)
 
         return self.chi2_test_results
 
@@ -292,4 +292,4 @@ class HLA:
         genes_from_counts = set(self.allele_counts['gene'].tolist())
         genes = [x for x in genes if x in genes_from_counts]
 
-        make_pie(self.allele_counts, genes, cohort_name)
+        pie_charts.make_pie(self.allele_counts, genes, cohort_name)
