@@ -1,0 +1,6 @@
+name: mixcr
+channels:
+  - defaults
+  - milaboratories
+dependencies:
+  - mixcr

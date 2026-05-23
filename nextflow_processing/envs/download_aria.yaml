@@ -1,0 +1,9 @@
+name: aria2c_env
+channels:
+  - defaults
+  - bioconda
+  - conda-forge
+dependencies:
+  - aria2
+  - sra-tools
+  - pigz
