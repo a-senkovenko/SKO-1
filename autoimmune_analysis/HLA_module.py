@@ -4,7 +4,7 @@ import pandas as pd
 from loguru import logger
 
 from autoimmune_analysis import HLA_stat_tests
-from autoimmune_analysis import HLA_pie_charts
+from autoimmune_analysis import HLA_plots
 
 
 logger.remove()
@@ -292,4 +292,11 @@ class HLA:
         genes_from_counts = set(self.allele_counts['gene'].tolist())
         genes = [x for x in genes if x in genes_from_counts]
 
-        HLA_pie_charts.make_pie(self.allele_counts, genes, cohort_name)
+        HLA_plots.make_pie(self.allele_counts, genes, cohort_name)
+    
+
+    def make_barplots(self, min_carriers: int = 2) -> None:
+
+        df = self.allele_counts[self.allele_counts["carriers"] > min_carriers]
+
+        HLA_plots.make_barplots(df)

@@ -1,6 +1,7 @@
 import math
 
 import pandas as pd
+import seaborn as sns
 import matplotlib.pyplot as plt
 
 
@@ -125,3 +126,133 @@ def make_pie(
 
         plt.tight_layout(pad=2, h_pad=1.2, w_pad=2)
         plt.show()
+
+def make_barplots(df: pd.DataFrame) -> None:
+    sns.set_style("whitegrid")
+
+    diagnoses = df["diagnosis"].unique()
+    fig, axes = plt.subplots(2, 2, figsize=(18, 14))
+    axes = axes.flatten()
+
+    for ax, diagnosis in zip(axes, diagnoses):
+
+        sub = df[df["diagnosis"] == diagnosis].copy()
+
+        gene_order = (
+            sub.groupby("gene")["carrier_freq"]
+            .sum()
+            .sort_values(ascending=False)
+            .head(5)
+            .index
+        )
+
+        plot_parts = []
+
+        for gene in gene_order:
+
+            g = sub[sub["gene"] == gene].copy()
+
+            top_alleles = (
+                g.groupby("allele")["carrier_freq"]
+                .max()
+                .sort_values(ascending=False)
+                .head(4)
+                .index
+            )
+
+            g = g[g["allele"].isin(top_alleles)]
+
+            plot_parts.append(g)
+
+        plot_df = pd.concat(plot_parts)
+
+        allele_order = []
+
+        for gene in gene_order:
+
+            alleles = (
+                plot_df[plot_df["gene"] == gene]
+                .groupby("allele")["carrier_freq"]
+                .max()
+                .sort_values(ascending=False)
+                .index
+                .tolist()
+            )
+
+            allele_order.extend(alleles)
+
+        sns.barplot(
+            data=plot_df,
+            x="allele",
+            y="allele_freq",
+            hue="IFN_status",
+            hue_order=["High", "Low"],
+            palette = {'High': '#d62728', 'Low': '#1f77b4'},
+            order=allele_order,
+            ax=ax
+        )
+
+        current = 0
+
+        for gene in gene_order:
+
+            n = (
+                plot_df[plot_df["gene"] == gene]["allele"]
+                .nunique()
+            )
+
+            current += n
+
+            ax.axvline(current - 0.5, color="black", lw=1)
+
+        positions = []
+        labels = []
+
+        current = 0
+
+        for gene in gene_order:
+
+            n = (
+                plot_df[plot_df["gene"] == gene]["allele"]
+                .nunique()
+            )
+
+            center = current + (n - 1) / 2
+
+            positions.append(center)
+            labels.append(f"{gene}")
+
+            current += n
+
+        ax.set_xticks(range(len(allele_order)))
+        ax.set_xticklabels(
+            allele_order,
+            rotation=45,
+            ha="right"
+        )
+
+        # gene labels
+        for pos, label in zip(positions, labels):
+
+            ax.text(
+                pos,
+                -0.16,
+                label,
+                ha="center",
+                va="top",
+                transform=ax.get_xaxis_transform(),
+                fontsize=16,
+                fontweight="bold"
+            )
+
+        ax.set_title(diagnosis, fontsize=20, fontweight="bold")
+
+        ax.set_xlabel("")
+        ax.set_ylabel("Allele frequencies")
+
+
+    for i in range(len(diagnoses), 4):
+        fig.delaxes(axes[i])
+
+    plt.tight_layout()
+    plt.show()
