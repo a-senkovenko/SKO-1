@@ -1,10 +1,16 @@
-import re
-import glob
 import pandas as pd
 import numpy as np
-import os
+
 from skbio.stats.composition import clr, multi_replace
+
+import os
 import sys
+import re
+import glob
+
+import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
+import seaborn as sns
 
 def get_files_dict(
     results_dir: str,
@@ -132,3 +138,57 @@ def clr_transform(freq_matrix: pd.DataFrame):
     clr_freqs = pd.DataFrame(clr_freqs, index=SRRs, columns=gene_cols)
 
     return clr_freqs
+
+def plot_clustermap(df: pd.DataFrame, gene_cols: list, title: str = "") -> None:
+    """
+    Plots a clustermap for CLR-transformed gene frequencies.
+
+    - df: DataFrame with SRR, diagnosis, predicted_ifn_status and gene columns
+    - gene_cols: list of gene column names
+    - title: optional plot title
+    """
+    diagnosis_palette = {'H': 'greenyellow', 'MS': 'darkorange', 'SLE': 'm', 'CLE': 'thistle'}
+    ifn_palette = {"High": "#d62728", "Low": "#1f77b4"}
+
+    col_order = df.sort_values(["diagnosis", "predicted_ifn_status"])["SRR"].values
+
+    col_colors = pd.DataFrame({
+        "Diagnosis": df.set_index("SRR").loc[col_order, "diagnosis"].map(diagnosis_palette),
+        "IFN status": df.set_index("SRR").loc[col_order, "predicted_ifn_status"].map(ifn_palette)
+    }, index=col_order)
+
+    data_matrix = df.set_index("SRR")[gene_cols].T[col_order]
+
+    g = sns.clustermap(
+        data=data_matrix,
+        col_colors=col_colors,
+        col_cluster=False,
+        row_cluster=True,
+        cmap="viridis",
+        figsize=(15, 10),
+        cbar_kws={"label": "CLR-transformed frequency"}
+    )
+
+    diag_patches = [mpatches.Patch(color=c, label=l) for l, c in diagnosis_palette.items()]
+    ifn_patches = [mpatches.Patch(color=c, label=l) for l, c in ifn_palette.items()]
+
+    leg1 = g.ax_heatmap.legend(
+        handles=diag_patches, title="Diagnosis",
+        loc="upper left", bbox_to_anchor=(1.15, 1.1),
+        frameon=True
+    )
+    g.ax_heatmap.add_artist(leg1)
+
+    g.ax_heatmap.legend(
+        handles=ifn_patches, title="IFN status",
+        loc="upper left", bbox_to_anchor=(1.15, 0.75),
+        frameon=True
+    )
+
+    g.ax_heatmap.set_xlabel("")
+    g.ax_heatmap.set_ylabel("")
+
+    if title:
+        plt.suptitle(title, fontweight="bold", y=1.02)
+
+    plt.show()
