@@ -34,7 +34,7 @@ def get_files_dict(
     valid_srr = set(metadata["SRR"].astype(str))
 
     for gene in genes:
-        filepath = f"SRR[0-9]*_mixcr/SRR[0-9]*.clones_{gene}.tsv"
+        filepath = f"SRR[0-9]*/SRR[0-9]*.clones_{gene}.tsv"
         pattern = os.path.join(results_dir, filepath)
 
         all_files = glob.glob(pattern, recursive=True)
@@ -42,9 +42,6 @@ def get_files_dict(
         filtered = []
 
         for f in all_files:
-            if "_trimmed_mixcr/" in f:
-                continue
-
             filename = os.path.basename(f) 
             srr = filename.split(".clones_")[0]
 
