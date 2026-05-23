@@ -1,4 +1,4 @@
-,GSE,object,diagnosis,sex,age,ethnicity,RNA_type,treatment,disease_type,country,state_province,continent,ifn_status,Batch,IFN_Probability,Predicted_IFN_status
+SRR,GSE,object,diagnosis,sex,age,ethnicity,RNA_type,treatment,disease_type,country,state_province,continent,ifn_status,Batch,IFN_Probability,Predicted_IFN_status
 SRR10342368,GSE139350,PBMC,SLE,F,47.0,,polyA,,SLE,China,Hubei,,,1,0.06,Low
 SRR10342369,GSE139350,PBMC,SLE,F,38.0,,polyA,,SLE,China,Hubei,,,1,0.25,Low
 SRR10342370,GSE139350,PBMC,H,F,45.0,,polyA,,H,China,Hubei,,,0,0.0,Low
