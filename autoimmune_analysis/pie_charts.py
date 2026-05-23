@@ -1,63 +1,77 @@
-import matplotlib.pyplot as plt
 import math
 
+import pandas as pd
+import matplotlib.pyplot as plt
 
-def prepare_pie_data(df_counts, gene, min_top_n=5, min_pct=10, target_pct=90):
+
+def prepare_pie_data(
+    df_counts: pd.DataFrame,
+    gene: str,
+    min_top_n: int = 5,
+    min_pct: float = 10,
+    target_pct: float = 90,
+) -> tuple[list[str], list[float]]:
 
     # Aggregate data by alleles to exclude duplicates.
     gene_data = (
-        df_counts[df_counts['gene'] == gene]
-        .groupby('allele')['allele_copies']
+        df_counts.loc[df_counts['gene'] == gene]
+        .groupby('allele', as_index=False)['allele_copies']
         .sum()
-        .reset_index()
-    )
-    gene_data = gene_data.sort_values('allele_copies', ascending=False).reset_index(
-        drop=True
+        .sort_values('allele_copies', ascending=False, ignore_index=True)
     )
 
-    labels = gene_data['allele'].tolist()
-    values = gene_data['allele_copies'].tolist()
-    total = sum(values)
+    total = gene_data['allele_copies'].sum()
 
-    percentages = [(v / total) * 100 for v in values]
+    gene_data['pct'] = gene_data['allele_copies'] / total * 100
 
-    min_top_n = min(min_top_n, len(values))
-    selected_indices = [i for i in range(min_top_n)]
-    selected_labels = labels[:min_top_n]
-    selected_values = values[:min_top_n]
-    selected_pcts = percentages[:min_top_n]
+    # guaranteed top-N alleles
+    top_n = min(min_top_n, len(gene_data))
+    selected = gene_data.iloc[:top_n].copy()
+    current_pct = selected['pct'].sum()
 
-    current_sum_pct = sum(selected_pcts)
+    # additional alleles
+    if current_pct < target_pct:
+        remaining = gene_data.iloc[top_n:]
+        additional = remaining[remaining['pct'] >= min_pct]
+        cumulative_pct = current_pct
 
-    if current_sum_pct < target_pct:
-        i = min_top_n
-        while (
-            i < len(values)
-            and percentages[i] >= min_pct
-            and current_sum_pct < target_pct
-        ):
-            selected_indices.append(i)
-            selected_values.append(values[i])
-            selected_labels.append(labels[i])
-            selected_pcts.append(percentages[i])
-            current_sum_pct = sum(selected_pcts)
-            i += 1
+        extra_rows = []
 
-    other_indices = [j for j in range(len(values)) if j not in selected_indices]
+        for row in additional.itertuples():
+            if cumulative_pct >= target_pct:
+                break
 
-    if other_indices:
-        other_value = sum(values[j] for j in other_indices)
-        other_pct = (other_value / total) * 100
-        selected_values.append(other_value)
-        selected_labels.append('Other')
-        selected_pcts.append(other_pct)
+            extra_rows.append(row.Index)
+            cumulative_pct += row.pct
 
-    return selected_labels, selected_values
+        if extra_rows:
+            selected = pd.concat(
+                [selected, gene_data.loc[extra_rows]], ignore_index=True
+            )
+
+    # other
+    other = gene_data.loc[~gene_data['allele'].isin(selected['allele'])]
+
+    if not other.empty:
+        other_row = pd.DataFrame(
+            {'allele': ['Other'], 'allele_copies': [other['allele_copies'].sum()]}
+        )
+
+        selected = pd.concat([selected, other_row], ignore_index=True)
+
+    return (
+        selected['allele'].tolist(),
+        selected['allele_copies'].tolist(),
+    )
 
 
-def make_pie(df_counts, genes, cohort_name='cohort'):
+def make_pie(
+    df_counts: pd.DataFrame,
+    genes: str | list[str],
+    cohort_name: str = 'cohort',
+) -> None:
 
-    def autopct_func(pct):
+    def autopct_func(pct: float) -> str:
         return (f'{pct:.1f}%') if pct > 5 else ''
 
     if isinstance(genes, str):
@@ -109,6 +123,5 @@ def make_pie(df_counts, genes, cohort_name='cohort'):
             fontweight='bold',
         )
 
-        fig.subplots_adjust(wspace=0.8, top=0.92)
         plt.tight_layout(pad=2, h_pad=1.2, w_pad=2)
         plt.show()
