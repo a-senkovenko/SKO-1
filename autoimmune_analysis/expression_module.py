@@ -2,8 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from scipy.stats import mannwhitneyu, zscore
-import gzip
+from scipy.stats import mannwhitneyu, zscore, f_oneway, tukey_hsd
 from pydeseq2.dds import DeseqDataSet
 from pydeseq2.ds import DeseqStats
 
@@ -117,8 +116,30 @@ def plot_volcano(res, padj_threshold=0.05, lfc_threshold=1):
     plt.tight_layout()
     plt.show()
 
-def plot_boxplot_stats(log2_tpm, metadata, gene_list,
+def get_significance_stars(pval):
+    if pval < 0.0001:
+        return '****'
+    elif pval < 0.001:
+        return '***'
+    elif pval < 0.01:
+        return '**'
+    elif pval < 0.05:
+        return '*'
+    else:
+        return 'ns'
+    
+def add_significance_bars(ax, x1, x2, y_pos, pval, bar_height=0.1):
+    star = get_significance_stars(pval)
+    if star != 'ns':
+        ax.plot([x1, x1, x2, x2],
+                [y_pos - bar_height, y_pos, y_pos, y_pos - bar_height],
+                color='black', linewidth=0.8)
+        ax.text((x1 + x2) / 2, y_pos + 0.05, star,
+                ha='center', va='bottom', fontsize=8, fontweight='bold')
+
+def plot_boxplot_genes(log2_tpm, metadata, gene_list,
                        condition_col='diagnosis'):
+    group_col = 'Predicted_IFN_status'
     available_genes = [g for g in gene_list if g in log2_tpm.index]
     expr_data = []
     for gene in available_genes:
@@ -127,47 +148,38 @@ def plot_boxplot_stats(log2_tpm, metadata, gene_list,
             if srr in log2_tpm.columns:
                 expr_data.append({
                     'SRR': srr,
-                    'diagnosis': row['diagnosis'],
-                    'IFN_status': row['Predicted_IFN_status'],
+                    condition_col: row[condition_col],
+                    group_col: row[group_col],
                     'gene': gene,
                     'expression': log2_tpm.loc[gene, srr]
                 })
     expr_df = pd.DataFrame(expr_data)
-    fig, axes = plt.subplots(3, 3, figsize=(10, 10))
-    axes = axes.flatten()
+    n_cols = 3
+    n_genes = len(available_genes)
+    n_rows = (n_genes + n_cols - 1) // n_cols
+    fig, axes = plt.subplots(n_rows, n_cols, figsize=(10, 10))
+    axes = axes.flatten() if n_rows > 1 else [axes]
     for i, gene in enumerate(available_genes):
         ax = axes[i]
         subset = expr_df[expr_df['gene'] == gene]
-        sns.boxplot(data=subset, x='diagnosis', y='expression', hue='IFN_status',
+        sns.boxplot(data=subset, x=condition_col, y='expression', hue=group_col,
                     palette={'High': '#d62728', 'Low': '#1f77b4'}, ax=ax)
-        sns.stripplot(data=subset, x='diagnosis', y='expression', hue='IFN_status',
+        sns.stripplot(data=subset, x=condition_col, y='expression', hue=group_col,
                       palette={'High': '#d62728', 'Low': '#1f77b4'}, 
                       dodge=True, alpha=0.2, size=2, ax=ax)
         y_max = subset['expression'].max()
-        diagnoses_gene = subset['diagnosis'].unique()
-        for j, diag in enumerate(diagnoses_gene):
-            high_vals = subset[(subset['diagnosis'] == diag) & (subset['IFN_status'] == 'High')]['expression']
-            low_vals = subset[(subset['diagnosis'] == diag) & (subset['IFN_status'] == 'Low')]['expression']
+        conditions = subset[condition_col].unique()
+        for j, diag in enumerate(conditions):
+            high_vals = subset[(subset[condition_col] == diag) & 
+                                (subset[group_col] == 'High')]['expression'].dropna()
+            low_vals = subset[(subset[condition_col] == diag) &
+                                (subset[group_col] == 'Low')]['expression'].dropna()
             if len(high_vals) > 0 and len(low_vals) > 0:
                 stat, pval = mannwhitneyu(high_vals, low_vals)
-                if pval < 0.0001:
-                    star = '****'
-                elif pval < 0.001:
-                    star = '***'
-                elif pval < 0.01:
-                    star = '**'
-                elif pval < 0.05:
-                    star = '*'
-                else:
-                    star = 'ns'
-                if star != 'ns':
-                    x1 = j - 0.2
-                    x2 = j + 0.2
-                    y_pos = y_max + 0.3
-                    ax.plot([x1, x1, x2, x2], [y_pos - 0.1, y_pos, y_pos, y_pos - 0.1], 
-                            color='black', linewidth=0.8)
-                    ax.text((x1 + x2) / 2, y_pos + 0.05, star, ha='center', va='bottom', 
-                            fontsize=8, fontweight='bold')
+                x1 = j - 0.2
+                x2 = j + 0.2
+                y_pos = y_max + 0.3
+                add_significance_bars(ax, x1, x2, y_pos, pval)
         ax.set_title(gene, fontsize=11)
         ax.set_xlabel('')
         ax.set_ylabel('log2(TPM+1)')
@@ -177,15 +189,15 @@ def plot_boxplot_stats(log2_tpm, metadata, gene_list,
     fig.legend(handles[:2], labels[:2], loc='upper right', title='IFN Status')
     for i in range(len(available_genes), len(axes)):
         axes[i].set_visible(False)
-    plt.suptitle('IFN Signature Genes Expression by Diagnosis and IFN Status', 
+    plt.suptitle(f'IFN Signature Genes Expression by {condition_col} and IFN Status', 
                  fontsize=12, y=1.02)
     plt.tight_layout()
     plt.show()
     
-def calculate_ifn_score(metadata, log2_tpm, ifn_genes, gse_col='GSE'):
+def calculate_ifn_score(metadata, log2_tpm, ifn_genes):
     metadata['IFN_score'] = np.nan
-    for gse in metadata[gse_col].unique():
-        gse_samples = metadata[metadata[gse_col] == gse]['SRR'].tolist()
+    for gse in metadata['GSE'].unique():
+        gse_samples = metadata[metadata['GSE'] == gse]['SRR'].tolist()
         gse_samples = [s for s in gse_samples if s in log2_tpm.columns]
         available_genes = [g for g in ifn_genes if g in log2_tpm.index]
         gse_data = log2_tpm.loc[available_genes, gse_samples].copy()
@@ -193,44 +205,36 @@ def calculate_ifn_score(metadata, log2_tpm, ifn_genes, gse_col='GSE'):
         ifn_scores = gse_zscored.mean(axis=1)
         for sample in gse_samples:
             metadata.loc[metadata['SRR'] == sample, 'IFN_score'] = ifn_scores[sample]
+    return metadata
+
+def plot_boxplot_score(metadata, condition_col='diagnosis', test='mannwhitney'):
     plt.figure(figsize=(7, 4))
-    boxplot = sns.boxplot(data=metadata, x='diagnosis', y='IFN_score', hue='Predicted_IFN_status', 
-                          palette={'High': '#d62728', 'Low': '#1f77b4'})
-    sns.stripplot(data=metadata, x='diagnosis', y='IFN_score', hue='Predicted_IFN_status',
+    ax = plt.gca()
+    sns.boxplot(data=metadata, x=condition_col, y='IFN_score', hue='Predicted_IFN_status', 
+                palette={'High': '#d62728', 'Low': '#1f77b4'}, ax=ax)
+    sns.stripplot(data=metadata, x=condition_col, y='IFN_score', hue='Predicted_IFN_status',
                   palette={'High': '#d62728', 'Low': '#1f77b4'}, dodge=True, alpha=0.3, size=3,
-                  legend=False)
-    diagnoses = metadata['diagnosis'].unique()
+                  legend=False, ax=ax)
+    diagnoses = metadata[condition_col].unique()
     y_max = metadata['IFN_score'].max()
+    y_min = metadata['IFN_score'].min()
+    y_range = y_max - y_min
     for i, diag in enumerate(diagnoses):
-        high_vals = metadata[(metadata['diagnosis'] == diag) & 
-                                        (metadata['Predicted_IFN_status'] == 'High')]['IFN_score']
-        low_vals = metadata[(metadata['diagnosis'] == diag) & 
-                                       (metadata['Predicted_IFN_status'] == 'Low')]['IFN_score']
+        high_vals = metadata[(metadata[condition_col] == diag) & 
+                            (metadata['Predicted_IFN_status'] == 'High')]['IFN_score'].dropna()
+        low_vals = metadata[(metadata[condition_col] == diag) & 
+                            (metadata['Predicted_IFN_status'] == 'Low')]['IFN_score'].dropna()
         stat, pval = mannwhitneyu(high_vals, low_vals)
-        if pval < 0.0001:
-            star = '****'
-        elif pval < 0.001:
-            star = '***'
-        elif pval < 0.01:
-            star = '**'
-        elif pval < 0.05:
-            star = '*'
-        else:
-            star = 'ns'
-        if star != 'ns':
-            x1 = i - 0.2
-            x2 = i + 0.2
-            y_pos = y_max + 0.5
-            plt.plot([x1, x1, x2, x2], [y_pos - 0.1, y_pos, y_pos, y_pos - 0.1], 
-                     color='black', linewidth=1)
-            plt.text((x1 + x2) / 2, y_pos + 0.05, star, ha='center', va='bottom', 
-                     fontsize=10, fontweight='bold')
+        x1 = i - 0.2
+        x2 = i + 0.2
+        y_pos = y_max + (y_range * 0.05)
+        add_significance_bars(ax, x1, x2, y_pos, pval)
     plt.axhline(0, linestyle='--', color='black', alpha=0.5)
     plt.xlabel('Diagnosis', fontsize=12)
     plt.ylabel('IFN Score', fontsize=12)
-    plt.title('IFN Score by Diagnosis and IFN Status', fontsize=14)
+    plt.title(f'IFN Score by {condition_col} and IFN Status', fontsize=14)
     plt.legend(title='IFN Status', bbox_to_anchor=(1.05, 1), loc='upper left')
     plt.xticks(rotation=45)
+    plt.ylim(y_min - y_range*0.05, y_max + y_range*0.4)
     plt.tight_layout()
     plt.show()
-    return metadata
