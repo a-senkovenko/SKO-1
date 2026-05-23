@@ -168,7 +168,6 @@ def clip_ci(lower, upper, xmin, xmax):
 def plot_forest(
     df,
     diag='Diag',
-    figsize=(9, 7),
     xmin=0.05,
     xmax=50,
 ):
@@ -179,7 +178,6 @@ def plot_forest(
         df (pd.DataFrame): Input data containing columns "gene", "allele", "population",
             "OR", "CI_lower", and "CI_upper".
         diag (str, optional): Diagnosis label used in the plot title. Defaults to 'Diag'.
-        figsize (tuple, optional): Figure size passed to matplotlib. Defaults to (9, 7).
         xmin (float, optional): Minimum x-axis limit for the odds ratio display. Defaults to 0.05.
         xmax (float, optional): Maximum x-axis limit for the odds ratio display. Defaults to 50.
 
@@ -227,7 +225,7 @@ def plot_forest(
     plot_df['y'] = y_positions
 
     # FIGURE
-    fig, ax = plt.subplots(figsize=figsize)
+    fig, ax = plt.subplots(figsize=(9, 7))
 
     # REFERENCE LINE
     ax.axvline(

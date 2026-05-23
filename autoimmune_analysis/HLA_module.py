@@ -292,4 +292,4 @@ class HLA:
         genes_from_counts = set(self.allele_counts['gene'].tolist())
         genes = [x for x in genes if x in genes_from_counts]
 
-        pie_charts.make_pie(self.allele_counts, genes, cohort_name)
+        HLA_pie_charts.make_pie(self.allele_counts, genes, cohort_name)
