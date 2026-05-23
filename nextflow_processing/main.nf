@@ -4,7 +4,7 @@ params.outdir = "results"
 
 params.run_download = true
 params.run_kallisto = false
-params.run_fastp = false
+params.run_fastp = true
 params.run_star   = true
 params.run_mixcr   = false
 params.run_trust4  = false

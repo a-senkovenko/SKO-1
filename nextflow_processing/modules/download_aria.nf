@@ -14,7 +14,7 @@ process DOWNLOAD_ARIA {
 
     script:
     """
-    # Запускаем скрипт из bin
+    # Run script from bin directory
     ${projectDir}/bin/download_fastq_from_csv.sh ${srr}
     """
 }

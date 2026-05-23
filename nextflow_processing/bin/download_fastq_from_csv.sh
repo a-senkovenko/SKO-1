@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# ===== НАСТРОЙКИ =====
-SRR="$1"            # csv с одним столбцом (SRR...)
-THREADS=8                # для fasterq-dump
-ARIA_CONN=16             # соединений aria2c
+# ===== Settings =====
+SRR="$1"            # csv with one column (SRR...)
+THREADS=8                
+ARIA_CONN=16             
 
-# Проверка входного файла
+# Check input
 #if [[ ! -f "$CSV_FILE" ]]; then
 #    echo "ERROR: CSV file not found: $CSV_FILE"
 #    exit 1
@@ -15,13 +15,13 @@ ARIA_CONN=16             # соединений aria2c
 #echo "Processing CSV: $CSV_FILE"
 echo "Downloading $SRR..."
 
-# ===== ОСНОВНОЙ ЦИКЛ =====
+# ===== Main script =====
 #while IFS=, read -r acc; do
 
-    # пропускаем пустые строки
+    # Skip empty rows
 #    [[ -z "${acc// }" ]] && continue
 
-    # пропускаем header (если есть)
+    # Skip header
 #    if [[ "$acc" =~ ^(Run|run|Accession|accession)$ ]]; then
 #        continue
 #    fi
@@ -30,13 +30,13 @@ echo "Downloading $SRR..."
 #    echo "Processing: $acc"
 #    echo "=============================="
 
-    # 1. Удаляем старые файлы
+    # 1. Delete old files
     # rm -f "${acc}.sra" \
           # "${acc}_1.fastq.gz" \
           # "${acc}_2.fastq.gz" \
           # "${acc}.fastq.gz"
 
-    # 2. Скачиваем .sra через Amazon S3
+    # 2. Download .sra via Amazon S3
 #    echo "[Download] ${acc}.sra"
     aria2c -s ${ARIA_CONN} -k 1M --continue=true \
            --split=${ARIA_CONN} \
@@ -45,17 +45,16 @@ echo "Downloading $SRR..."
            -d . \
            -o "${SRR}.sra"
 
-    # Проверка скачивания
     if [[ ! -s "${SRR}.sra" ]]; then
         echo "ERROR: download failed for $SRR"
         continue
     fi
 
-    # 3. Конвертация в FASTQ
+    # 3. Fastq connversion
     echo "[fasterq-dump] ${SRR}"
     fasterq-dump --split-3 -e ${THREADS} "${SRR}.sra"
 
-    # 4. Сжатие
+    # 4. Compression
     echo "[gzip]"
     pigz -p ${THREADS} "${SRR}"*.fastq
 

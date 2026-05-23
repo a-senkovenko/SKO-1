@@ -14,13 +14,12 @@ process KALLISTO {
 
     script:
     """
-    # Создаём индекс, если ещё нет
+    # create index
     if [ ! -f "${params.kallisto_index}" ]; then
         echo "[kallisto] Building index from ${params.transcriptome_fasta}"
         kallisto index -i ${params.kallisto_index} ${params.transcriptome_fasta}
     fi
 
-    # Запуск квантования
     echo "[kallisto] Quantifying ${sample}"
     kallisto quant \\
         -i ${params.kallisto_index} \\
