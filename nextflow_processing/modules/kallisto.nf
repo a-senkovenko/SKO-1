@@ -2,7 +2,7 @@ process KALLISTO {
 
     tag "$sample"
 
-    publishDir "${params.outdir}/results_kallisto/${sample}_kallisto", mode: 'copy'
+    publishDir "${params.outdir}/kallisto/${sample}_kallisto", mode: 'copy'
 
     input:
     tuple val(sample), path(fastq_1), path(fastq_2)

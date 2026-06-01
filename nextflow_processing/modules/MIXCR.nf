@@ -2,7 +2,7 @@ process MIXCR {
 
     tag "$sample"
 
-    publishDir "${params.outdir}/results_mixcr", mode: 'copy'
+    publishDir "${params.outdir}/mixcr", mode: 'copy'
 
     input:
     tuple val(sample), path(fastq_1), path(fastq_2)

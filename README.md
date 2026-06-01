@@ -11,6 +11,8 @@
 
 Supervisor: **Pavel Skoptsov**
 
+Python version 3.14+ is required.
+
 ## Introduction
 
 Multiple sclerosis (MS) and systemic lupus erythematosus (SLE) are chronic autoimmune diseases that differ in their clinical features and underlying mechanisms, but both involve serious immune system dysfunction. Type I interferons (IFNs), particularly interferon-beta (IFN-β), play opposite roles in these conditions. In MS, IFN-β is commonly used as a first-line immunomodulatory treatment that decreases disease activity and reduces the frequency of relapses [[Jakimovski]](https://doi.org/10.1101/cshperspect.a032003). In SLE persistent overactivation of the type I IFN pathway known as the "interferon signature" or interferonopathy is a major factor driving inflammation, the breakdown of immune tolerance, and the production of autoantibodies [[Ishihara]](https://doi.org/10.3390/biom15111586).
@@ -81,7 +83,48 @@ Additional processes:
 * `TRUST4` – process that uses [TRUST4](https://github.com/liulab-dfci/TRUST4) for clonotype repertoire reconstruction, can be used as an alternative for MIXCR when license is unavailable.
 
 ### Prepare to work
+1. Install separate environment for ArcasHLA and add path to IMGTHLA directory to `main.nf`:
+```
+params.arcasHLAEnv ="../your_path_here"
+```
+2. If TRUST4 will be used, it is recommended to install it locally and add paths to references to `main.nf`:
+```
+params.trust4_ref  = "../your_directory/TRUST4/human_IMGT+C.fa"
+params.trust4_fa   = "../your_directory/TRUST4/hg38_bcrtcr.fa"
+```
+Also add path to script within TRUST4.nf.
 
+3. Make directories used by pipeline in your nextflow directory
+```
+mkdir -p reference reference_star fastqs sample_data results
+mkdir -p results/{fastp,fastp_trimmed,star,mixcr,trust4,arcas_hla,multiqc}
+```
+4. Add sample.csv into sample_data, the format is one column of SRR IDs:
+```
+SRR7367602
+SRR7367603
+SRR7367604
+SRR7367605
+```
+5. Run pipeline in its own environment
+```
+conda activate nextflow_env
+nextflow run main.nf
+```
+Additional flags can be used in run command.
+* `-preview` - to check which processes will be run (without running the pipeline)
+* `-with-trace` - makes trace file to look-up on progress
+
+By default main.nf runs download > fastp > star. Change the following flags in `main.nf` directly or add `-run_process_name true` in your command to run the process.
+```
+params.run_download = true
+params.run_kallisto = false
+params.run_fastp = true
+params.run_star   = true
+params.run_mixcr   = false
+params.run_trust4  = false
+params.run_arcashla = false
+```
 
 ### Future adjustments
 * Make separate docker profile and docker images to operate with.
@@ -183,4 +226,11 @@ Forest plot is used for meta-analysis, and a separate module is imported to crea
 
 Specific usage examples are given in [notebook](notebooks/hla_analysis.ipynb) for HLA-analysis.
 
+## References
+* D. Jakimovski, C. Kolb, M. Ramanathan, et al., "Interferon β for Multiple Sclerosis," Cold Spring Harb. Perspect. Med., vol. 8, no. 11, pp. a032003, Nov. 2018, doi: 10.1101/cshperspect.a032003.
 
+* R. Ishihara, R. Watanabe, M. Shiomi, et al., "The type I interferon axis in systemic autoimmune diseases: From molecular pathways to targeted therapy," Biomolecules, vol. 15, no. 11, Art. no. 1586, Nov. 2025, doi: 10.3390/biom15111586.
+
+* F. Gilli, A. Bertolotto, A. Sala, F. Hoffmann, M. Capobianco, S. Malucchi, T. Glass, L. Kappos, R. L. Lindberg, and D. Leppert, "Neutralizing antibodies against IFN-β in multiple sclerosis: Antagonization of IFN-β mediated suppression of MMPs," Brain, vol. 127, no. Pt 2, pp. 259–268, Feb. 2004, doi: 10.1093/brain/awh028.
+
+* E. Grenmyr, B. Gullstrand, A. Jern, N. Björklund, R. Kahn, F. Kahn, P. Linge, A. Jönsen, and A. A. Bengtsson, "Neutralizing autoantibodies against interferon alpha in systemic lupus erythematosus: Prevalence, age of onset, and clinical associations," Lupus, vol. 35, no. 6, pp. 623–629, May 2026, doi: 10.1177/09612033261432154.

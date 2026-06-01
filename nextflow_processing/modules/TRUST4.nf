@@ -1,6 +1,6 @@
 process TRUST4  {
 
-    publishDir "${params.outdir}/results_trust4/${sample}_trust4", mode: 'copy'
+    publishDir "${params.outdir}/trust4/${sample}_trust4", mode: 'copy'
 
     input:
     tuple val(sample), path(fastq_1), path(fastq_2)
@@ -15,7 +15,7 @@ process TRUST4  {
 
     script:
     """
-    export PATH=\$PATH:/home/bioinf2026/sko1/TRUST4
+    export PATH=\$PATH:/YOUR-PATH/TRUST4
     run-trust4 \
       -f ${params.trust4_fa} \
       --ref ${params.trust4_ref} \
