@@ -98,7 +98,7 @@ Transcriptomic data for **MS** and **SLE** were retrieved from public repositori
 *  **Clinical:** Baseline samples only (treatment-naïve) to minimize confounding.
 
 
-**Final Cohort (n = 433):**
+**Final Cohort (n = 433).**
 Data from studies with GEO registration numbers were used for the analysis: GSE159225, GSE122459, GSE167923, GSE139350, GSE162828, GSE165159, GSE169080, GSE175839, GSE218731, GSE223097, GSE250023, GSE92472, GSE86884, GSE235357, GSE250453, GSE116006.
 
 | Group | Count |
@@ -112,16 +112,13 @@ Data from studies with GEO registration numbers were used for the analysis: GSE1
 
 ## Classifier
 
-Supervised Random Forest classifier for stratifying samples into **IFN-High** / **IFN-Low** categories based on the expression of 9 canonical type I interferon response genes (*IFI27, IFIT1, IFIT3, MX1, OAS1, RSAD2, STAT1, IFNAR1, IFNAR2*).
+Supervised Random Forest classifier for stratifying samples into **IFN-High** / **IFN-Low** categories based on the expression of 9 canonical type I interferon response genes (*IFI27, IFIT1, IFIT3, MX1, OAS1, RSAD2, STAT1, IFNAR1, IFNAR2*).  **Training Data:** SLE cohort (GSE116006, n=152) with validated interferon status.
 
-**Key Details:**
-*   **Training Data:** SLE cohort (GSE116006, n=152) with RT-PCR validated interferon status.
-*   **Implementation:** Python `scikit-learn` (v.1.6.1), stratified 5-fold CV, optimized threshold (0.67).
-*   **Performance:** AUC = 0.996, Test Accuracy = 96.8%.
+![](images/classifier.png)
 
 >  *Validated on SLE; application to other conditions (e.g., MS) requires further validation.*
 
-![](images/classifier.png)
+More details at [notebook](https://github.com/a-senkovenko/SKO-1/blob/main/notebooks/feature_classifier.ipynb).
 
 ## Gene expression analysis
 
