@@ -99,7 +99,7 @@ Transcriptomic data for **MS** and **SLE** were retrieved from public repositori
 
 
 **Final Cohort (n = 433):**
-
+Data from studies with GEO registration numbers were used for the analysis: GSE159225, GSE122459, GSE167923, GSE139350, GSE162828, GSE165159, GSE169080, GSE175839, GSE218731, GSE223097, GSE250023, GSE92472, GSE86884, GSE235357, GSE250453, GSE116006.
 
 | Group | Count |
 |-------|-------|
