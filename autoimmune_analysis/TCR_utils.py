@@ -1,16 +1,11 @@
-import pandas as pd
-import numpy as np
-
-from skbio.stats.composition import clr, multi_replace
-
-import os
-import sys
-import re
 import glob
+import os
 
-import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
+import matplotlib.pyplot as plt
+import pandas as pd
 import seaborn as sns
+from skbio.stats.composition import clr, multi_replace
 
 def get_files_dict(
     results_dir: str,

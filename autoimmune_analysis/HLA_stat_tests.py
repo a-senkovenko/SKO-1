@@ -1,16 +1,12 @@
 import sys
-sys.path.append('..')
-from typing import Any, Dict, Tuple
+from typing import Any
 
-import pandas as pd
 import numpy as np
-
+import pandas as pd
 from loguru import logger
-from scipy.stats import fisher_exact
-from scipy.stats import chi2_contingency
-from statsmodels.stats.multitest import multipletests
+from scipy.stats import chi2_contingency, fisher_exact
 from statsmodels.stats.contingency_tables import Table2x2
-
+from statsmodels.stats.multitest import multipletests
 
 logger.remove()
 custom_format = (
@@ -26,7 +22,7 @@ def make_tables(
     diagnosis: str,
     test: str = 'fisher',
     min_carriers: int = 3,
-) -> Dict[str, np.ndarray]:
+) -> dict[str, np.ndarray]:
     """Creating a contingency table for statistical tests"""
 
     logger.info(f"PROCESSING {diagnosis}-SAMPLES FOR {test.upper()} TEST")
@@ -105,7 +101,7 @@ def make_row(
     pval: float,
     contingency_table: Table2x2,
     test: str,
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     
     lower, upper = contingency_table.oddsratio_confint()
     return {
@@ -182,7 +178,7 @@ def get_fisher_test_results(
     return pd.concat(stats, ignore_index=True)
 
 
-def choose_test(table: np.ndarray) -> Tuple[str, float, float, Table2x2]:
+def choose_test(table: np.ndarray) -> tuple[str, float, float, Table2x2]:
 
     row_sums = table.sum(axis=1)
     col_sums = table.sum(axis=0)

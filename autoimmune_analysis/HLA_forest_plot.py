@@ -1,9 +1,9 @@
+import matplotlib.pyplot as plt
+import matplotlib.transforms as transforms
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-from matplotlib.patches import Polygon
 from matplotlib.lines import Line2D
-import matplotlib.transforms as transforms
+from matplotlib.patches import Polygon
 from matplotlib.ticker import ScalarFormatter
 
 

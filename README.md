@@ -126,8 +126,6 @@ params.run_trust4  = false
 params.run_arcashla = false
 ```
 
-### Future adjustments
-* Make separate docker profile and docker images to operate with.
 
 ## Data Collection & Cohort
 

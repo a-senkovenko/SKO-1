@@ -3,8 +3,7 @@ import sys
 import pandas as pd
 from loguru import logger
 
-from autoimmune_analysis import HLA_stat_tests
-from autoimmune_analysis import HLA_plots
+from autoimmune_analysis import HLA_plots, HLA_stat_tests
 
 
 logger.remove()
