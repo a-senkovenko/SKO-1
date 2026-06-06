@@ -126,18 +126,14 @@ params.run_trust4  = false
 params.run_arcashla = false
 ```
 
-
 ## Data Collection & Cohort
 
 
-Transcriptomic data for **MS** and **SLE** were retrieved from public repositories (GEO/ArrayExpress). From an initial pool of 2,300+ samples, we curated a high-quality cohort based on strict **technical and clinical criteria**:
-*  **Sequencing:** Paired-end reads, length ≥100 nt.
-*  **Source:** Peripheral blood (to capture diverse immune populations).
-*  **Clinical:** Baseline samples only (treatment-naïve) to minimize confounding.
-
-
-**Final Cohort (n = 433).** Data from studies with GEO registration numbers were used for the analysis: GSE159225, GSE122459, GSE167923, GSE139350, GSE162828, GSE165159, GSE169080, GSE175839, GSE218731, GSE223097, GSE250023, GSE92472, GSE86884, GSE235357, GSE250453, GSE116006.
-
+Transcriptomic data for MS and SLE were retrieved from the public repository **Gene Expression Omnibus** ([GEO](https://www.ncbi.nlm.nih.gov/geo/)). From an initial pool of 2,300+ samples, we curated a high-quality cohort based on strict technical and clinical criteria:
+- **Sequencing**: paired-end reads, length ≥100 nt.
+- **Source**: peripheral blood (to capture diverse immune populations).
+- **Clinical**: baseline samples only (treatment-naive) to minimize confounding.
+The final cohort (n = 433) included data from the following GEO accession numbers: GSE159225, GSE122459, GSE167923, GSE139350, GSE162828, GSE165159, GSE169080, GSE175839, GSE218731, GSE223097, GSE250023, GSE92472, GSE86884, GSE235357, GSE250453, and GSE116006.
 | Group | Count |
 |-------|-------|
 | **SLE** | 249 |
@@ -145,22 +141,33 @@ Transcriptomic data for **MS** and **SLE** were retrieved from public repositori
 | **MS**  | 63 |
 | **Healthy Controls** | 59 |
 
+
 ![](images/data_cohorts.png)
+
+
+*CLE (cutaneous lupus erythematosus) is a group of heterogeneous autoimmune diseases affecting the skin and mucous membranes. It can occur as an isolated skin lesion or as part of SLE. This study examines it separately from SLE.*
 
 ## Classifier
 
-A Random Forest classifier with supervised learning was used to stratify samples into **high interferon**/**low interferon** categories based on the expression of 9 canonical type I interferon response genes (*IFI27, IFIT1, IFIT3, MX1, OAS1, RSAD2, STAT1, IFNAR1, IFNAR2*). **Training data:** SLE patient cohort (GSE116006, n=152) with confirmed interferon status.
+Following alignment with `STAR`, gene read counts were determined using `featureCounts` from the [Subread package](https://subread.sourceforge.net/). Subsequently, gene annotation, filtering, and normalization were performed.
+
+
+For interferon status prediction (**IFN-High/IFN-Low**)*, we used the following:
+- A supervised Random Forest classifier;
+- Expression of 9 canonical type I interferon response genes (*IFI27, IFIT1, IFIT3, MX1, OAS1, RSAD2, STAT1, IFNAR1, IFNAR2*);
+- An SLE patient cohort (GSE116006, n=152) with RT-PCR-confirmed interferon status.
+
+
+More details can be found in the accompanying [notebook](notebooks/feature_classifier.ipynb).
 
 ![](images/classifier.png)
 
->  *Validated on SLE; application to other conditions (e.g., MS) requires further validation.*
+*Note: The model was validated on the SLE cohort; its application to other conditions (e.g., MS) requires further validation.*
 
-More details at [notebook](https://github.com/a-senkovenko/SKO-1/blob/main/notebooks/feature_classifier.ipynb).
 
 ## Gene expression analysis
 
-A key focus of the analysis was evaluating the biological validity of our classification by assessing an Interferon type I (IFN) score. Using a curated set of IFN-inducible genes (IFI27, IFIT1, IFIT3, MX1, OAS1, RSAD2, STAT1, IFNAR1, IFNAR2), we calculated an average expression score, which was Z-scored separately within each dataset to eliminate batch effect. 
-Mann—Whitney U test was applied to compare the IFN scores between the samples predicted as "IFN-High" and "IFN-Low" by our classifier, grouped by diagnosis, as well as by potential technical (RNA type, object) and biological (sex) confounders. The significant difference observed in these scores between "IFN-High" and "IFN-Low" samples supports the biological relevance of the classification. 
+A key focus of the analysis was evaluating the biological validity of our classification by assessing an Interferon type I (IFN) score. Using a curated set of IFN-inducible genes (IFI27, IFIT1, IFIT3, MX1, OAS1, RSAD2, STAT1, IFNAR1, IFNAR2), we calculated an average expression score, which was Z-scored separately within each dataset to eliminate batch effect. Mann-Whitney U test was applied to compare the IFN scores between the samples predicted as "IFN-High" and "IFN-Low" by our classifier, grouped by diagnosis, as well as by potential technical (RNA type, object) and biological (sex) confounders. The significant difference observed in these scores between "IFN-High" and "IFN-Low" samples supports the biological relevance of the classification. 
 
 ![](images/ifn_score.png)
 
@@ -169,6 +176,7 @@ Additional gene expression analysis involved calculating similar scores for vari
 To explore the transcriptomic differences between specific groups, we performed differential gene expression analysis using [DESeq2](https://github.com/thelovelab/DESeq2). In particular, we assessed the differences between healthy controls, as the presence of healthy samples classified as "IFN-High" by our model was unexpected. Notably, these "IFN-High" healthy samples were found in different data sets, eliminating the possibility of a confounding batch effect. Interestingly, only IFN-inducible antiviral genes were differentially expressed between "IFN-High" and "IFN-Low" healthy controls.
 
 Results are summarized in the [notebook](notebooks/expression_analysis.ipynb).
+
 
 ## TCR
 T-cell receptor repertoire analysis was based on [MiXCR](https://github.com/milaboratory/mixcr/) clonotype tables generated from .fastq files. Frequency matrices were generated from those tables and we used perMANOVA and pairwise Mann-Whitney criterion with FDR in order to compare V, D and J-segment gene usage profiles between high and low interferon response groups. 
@@ -183,33 +191,30 @@ MiXCR clonotype tables for both TCR and BCR are available at this [link](https:/
 
 ## BCR
 
-BCR repertoire analysis was performed using MiXCR, followed by downstream processing of clonotype tables in a Jupyter notebook. The analysis focused on heavy-chain BCR V(D)J segments and their usage frequencies across samples.
+BCR repertoire analysis was performed with MiXCR, followed by downstream processing of clonotype tables in a Jupyter notebook. The analysis focused on heavy-chain BCR V(D)J segments and their usage frequencies across samples.
 
-In particular, the frequencies of IGHV, IGHD, and IGHJ segments were compared between groups with high and low predicted interferon status in patients with multiple sclerosis (MS), systemic lupus erythematosus (SLE), and cutaneous lupus erythematosus (CLE). This analysis was designed to identify repertoire features potentially associated with reduced IFN status, which was hypothesized to reflect the presence of neutralizing antibodies against type I interferons.
+We compared IGHV, IGHD, and IGHJ segment usage between IFN-Low and IFN-High groups in patients with multiple sclerosis, systemic lupus erythematosus, and cutaneous lupus erythematosus. Reduced IFN status was considered a potential proxy for the presence of neutralizing antibodies against type I interferons. For each sample, segment usage frequencies were calculated from MiXCR clonotype tables. Within each diagnostic group, median within-sample frequencies were used to identify the top 10 segments for each segment class. These segments were then compared between IFN-Low and IFN-High groups using a two-sided Mann-Whitney U test with Benjamini-Hochberg FDR correction.
 
-For each sample, V, D, and J segment usage frequencies were derived from MiXCR clonotype tables. Segment usage was summarized at the diagnostic-group level using median within-sample frequencies, and the top 10 segments were identified separately for each segment class (IGHV, IGHD, IGHJ). These top segments were then compared between Low- and High-IFN groups. Segment usage frequencies were compared between groups using a two-sided Mann-Whitney U test with Benjamini-Hochberg FDR correction for multiple testing.
+Significant differences were detected only in SLE. To assess whether these signals were consistent across datasets, IFN-Low and IFN-High samples were additionally compared within each GSE separately. This yielded dataset-specific estimates of effect size and direction for each segment.
+Among all analyzed segments, only **IGHD3-10** showed a significant and reproducible difference between IFN-Low and IFN-High groups in SLE across independent datasets. No analogous segment-level effects were observed in MS or CLE.
 
-Significant differences in several BCR segments were detected between Low- and High-IFN groups in SLE, whereas no such differences were observed in the other diagnostic groups.
-We next examined whether these effects remained consistent across individual GSE datasets or whether they were primarily driven by dataset-specific signals.
-For each selected segment, IFN-Low and IFN-High samples were compared separately within each GSE using a two-sided Mann-Whitney U test. This produced a dataset-specific estimate of effect size and direction for every segment.
+All results are available in:
+[BCR_analysis.ipynb](notebooks/BCR_analysis.ipynb)
 
-![](images/IGHD3-10.png)
-
-Among the analyzed BCR segments, only IGHD3-10 demonstrated a significant and reproducible difference between IFN-High and IFN-Low groups in SLE across independent datasets. No analogous segment-level effects were observed in MS or CLE.
-
-Results of the analysis are contained in [BCR_analysis](notebooks/BCR_analysis.ipynb) notebook.
 
 ## HLA typing
 
 To analyze the results of HLA genotyping obtained using arcasHLA, the data were merged into a tsv-table. In the  [notebook](notebooks/hla_analysis.ipynb) for HLA-analysis, there this tsv-table is concatenated with the metadata.
 
-To analyze the results of HLA genotyping, data were divided into ethnic groups, since different ethnicities are characterized by a different set of HLA alleles. Within each ethnic group, the observations were grouped by disease.
+To analyze the results of HLA genotyping obtained using arcasHLA, the data were merged into a tsv-table. In the  [notebook](notebooks/hla_analysis.ipynb) for HLA-analysis, this tsv-table was concatenated with the metadata.
 
-All statistical processing methods are combined in the HLA class:
+To analyze the results of HLA genotyping, data were divided into ethnic groups, as different ethnicities are characterized by a different set of HLA alleles. Within each ethnic group, the observations were grouped by disease.
 
-`count alleles` - calculates the occurrence of alleles for each group of *diagnosis-IFN status* for the uploaded batch; the output is a pandas.Dataframe (which is saved as an attribute `allele_counts`) containing the number of carriers of this allele, the number of copies of it, the number of its occurrences in homozygotes and heterozygotes, the number of occurrences of this allele in the *diagnosis-IFN status* group (`n_samples`), as well as the frequency of occurrence in fractions by carriers and the number of copies;
-based on `allele_counts`, the Fisher’s exact test and Chi-Square tests can be applied, at the same time, if allele has low expected counts (<5) or zero expected frequencies when forming the contingency table, Fisher’s exact test instead of Chi-Square is applied;
-barplots and pie charts are also drawn based on `allele_counts`.
+All statistical processing methods are combined in the `HLA` class:
+
+1. `count alleles` - calculates the number of occurrences of alleles for each group of *diagnosis-IFN status* for the uploaded batch. The output is a pandas.Dataframe (which is saved as an attribute `allele_counts`) containing the number of carriers of this allele, the number of copies of it, the number of its occurrences in homozygotes and heterozygotes, the number of occurrences of this allele in the *diagnosis-IFN status* group (`n_samples`), as well as the frequency of occurrence in fractions by carriers and the number of copies;
+2. Based on `allele_counts`, the Fisher’s exact test and the Chi-Square test can both be applied. However, if an allele has a low expected count (<5) or zero expected frequency when forming the contingency table, the Fisher’s exact test instead of Chi-Square test is applied.
+3. Barplots and pie charts are also drawn based on `allele_counts`.
 
 Forest plot is used for meta-analysis, and a separate module is imported to create it.
 
