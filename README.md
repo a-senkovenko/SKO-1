@@ -134,6 +134,7 @@ Transcriptomic data for MS and SLE were retrieved from the public repository **G
 - **Source**: peripheral blood (to capture diverse immune populations).
 - **Clinical**: baseline samples only (treatment-naive) to minimize confounding.
 The final cohort (n = 433) included data from the following GEO accession numbers: GSE159225, GSE122459, GSE167923, GSE139350, GSE162828, GSE165159, GSE169080, GSE175839, GSE218731, GSE223097, GSE250023, GSE92472, GSE86884, GSE235357, GSE250453, and GSE116006.
+
 | Group | Count |
 |-------|-------|
 | **SLE** | 249 |
