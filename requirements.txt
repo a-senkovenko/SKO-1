@@ -1,0 +1,16 @@
+gdown>=5.0
+ipykernel>=6.0
+jupyter>=1.0
+loguru>=0.7
+matplotlib>=3.8
+numpy>=1.26
+openpyxl>=3.1
+pandas>=2.1
+pydeseq2>=0.4
+scikit-bio>=0.6
+scikit-learn>=1.4
+scipy>=1.11
+seaborn>=0.13
+shap>=0.45
+statannotations>=0.7
+statsmodels>=0.14

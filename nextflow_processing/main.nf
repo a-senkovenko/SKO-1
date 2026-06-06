@@ -10,16 +10,18 @@ params.run_mixcr   = false
 params.run_trust4  = false
 params.run_arcashla = false
 
-params.trust4_ref  = "/home/bioinf2026/sko1/TRUST4/human_IMGT+C.fa"
-params.trust4_fa   = "/home/bioinf2026/sko1/TRUST4/hg38_bcrtcr.fa"
+params.trust4_ref  = "../TRUST4/human_IMGT+C.fa"
+params.trust4_fa   = "../TRUST4/hg38_bcrtcr.fa"
 
-params.transcriptome_fasta = "/home/bioinf2026/sko1/reference/gencode.v38.transcripts.fa.gz"
-params.kallisto_index     = "/home/bioinf2026/sko1/reference/human_transcripts.idx"
+params.transcriptome_fasta = "reference/gencode.v38.transcripts.fa.gz"
+params.kallisto_index     = "reference/human_transcripts.idx"
+
+params.arcasHLAEnv ="../"
 
 params.samples_csv = "sample_data/sample.csv"
 params.fastq_dir   = "fastqs"
-params.bam_dir = "results/results_star/"
-params.star_index  = "/home/bioinf2026/sko1/reference_star"
+params.bam_dir = "results/star/"
+params.star_index  = "reference_star"
 
 
 include { DOWNLOAD_ARIA }       from './modules/download_aria.nf'
@@ -68,12 +70,17 @@ workflow {
         fastp_results = FASTP(fastq_pairs_ch)
     }
 
+    trimmed_fastq_ch = Channel.fromFilePairs(
+        "${params.outdir}/fastp_trimmed/*_trimmed_{1,2}.fastq.gz",
+        flat: true
+    )
+
     if(params.run_star){
-        star_bams = STAR(fastq_pairs_ch)
+        star_bams = STAR(trimmed_fastq_ch)
     }
 
     if(params.run_mixcr){
-        mixcr_results = MIXCR(fastq_pairs_ch)
+        mixcr_results = MIXCR(trimmed_fastq_ch)
     }
 
     /*
@@ -82,7 +89,7 @@ workflow {
     */
 
     if(params.run_kallisto){
-        KALLISTO(fastq_pairs_ch, params.transcriptome_fasta)
+        KALLISTO(trimmed_fastq_ch, params.transcriptome_fasta)
     }
 
     /*
@@ -91,7 +98,7 @@ workflow {
     */
 
     if(params.run_trust4){
-        trust_fastq = TRUST4(fastq_pairs_ch)
+        trust_fastq = TRUST4(trimmed_fastq_ch)
     }
 
     /*

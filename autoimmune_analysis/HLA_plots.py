@@ -1,8 +1,8 @@
 import math
 
+import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
-import matplotlib.pyplot as plt
 
 
 def prepare_pie_data(

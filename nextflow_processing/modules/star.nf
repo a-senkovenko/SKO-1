@@ -2,7 +2,7 @@ process STAR {
 
     tag "$sample"
 
-    publishDir "${params.outdir}/results_star", mode: 'copy'
+    publishDir "${params.outdir}/star", mode: 'copy'
 
     input:
     tuple val(sample), path(fastq_1), path(fastq_2)

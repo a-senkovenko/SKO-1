@@ -1,10 +1,10 @@
-import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
 import seaborn as sns
-from scipy.stats import mannwhitneyu, zscore, f_oneway, tukey_hsd
 from pydeseq2.dds import DeseqDataSet
 from pydeseq2.ds import DeseqStats
+from scipy.stats import mannwhitneyu, zscore
 
 def prepare_count_matrix(filepath, mapping_file='../data/genes_ensembl_length.csv',):
     counts = pd.read_csv(filepath, sep=',', index_col=0)
