@@ -183,6 +183,8 @@ T-cell receptor repertoire analysis was based on [MiXCR](https://github.com/mila
 
 For V-segments of TCR beta chains only 2 genes have shown higher frequencies in SLE samples with Low interferon beta response. This might imply their involvement in anti-interferon beta autoimmune response in SLE, but it should be noted that the effect size is small so these 2 changes are to be regarded as potential candidates with caution. No significant differences have been observed for D- and J-gene usage in the TCR beta-chain.
 
+![](images/TRBV_genes.jpg)
+
 You can find all the results of this analysis in these 2 notebooks:
 [TCR_analysis_diversity.ipynb](notebooks/TCR_analysis_diversity.ipynb)
 [TCR_analysis_gene_usage.ipynb](notebooks/TCR_analysis_gene_usage.ipynb)
